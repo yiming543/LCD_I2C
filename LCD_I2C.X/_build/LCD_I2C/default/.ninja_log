@@ -1,0 +1,8 @@
+# ninja log v6
+5	362	7846231753588436	CMakeFiles/LCD_I2C_default_default_XC8_compile.dir/D_/work_pic/LCD_I2C.X/mcc_generated_files/device_config.c.p1	a0f653396ef87f84
+8	394	7846231753619269	CMakeFiles/LCD_I2C_default_default_XC8_compile.dir/D_/work_pic/LCD_I2C.X/mcc_generated_files/examples/i2c_master_example.c.p1	28a1f97e7615a33c
+2	375	7846231753558438	CMakeFiles/LCD_I2C_default_default_XC8_compile.dir/D_/work_pic/LCD_I2C.X/main.c.p1	617862ba54a886ae
+17	388	7846231753704287	CMakeFiles/LCD_I2C_default_default_XC8_compile.dir/D_/work_pic/LCD_I2C.X/mcc_generated_files/pin_manager.c.p1	84d071432ebe26a5
+13	400	7846231753670752	CMakeFiles/LCD_I2C_default_default_XC8_compile.dir/D_/work_pic/LCD_I2C.X/mcc_generated_files/mcc.c.p1	adadf0b1144e2290
+11	412	7846231753650657	CMakeFiles/LCD_I2C_default_default_XC8_compile.dir/D_/work_pic/LCD_I2C.X/mcc_generated_files/i2c_master.c.p1	caeaf728ff7bf15e
+412	1472	7846231757669313	D:/work_pic/LCD_I2C.X/out/LCD_I2C/default.elf	6c2e8161aeb33ebd
