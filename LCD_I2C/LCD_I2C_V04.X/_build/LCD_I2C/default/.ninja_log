@@ -1,0 +1,16 @@
+# ninja log v7
+21	656	7852451816053178	CMakeFiles/LCD_I2C_default_default_XC8_compile.dir/D_/yiming/00work/LCD_I2C/LCD_I2C.X/mcc_generated_files/device_config.c.p1	e9b3c3939fa723c6
+24	681	7852451816084846	CMakeFiles/LCD_I2C_default_default_XC8_compile.dir/D_/yiming/00work/LCD_I2C/LCD_I2C.X/mcc_generated_files/examples/i2c_master_example.c.p1	8efa2adf94baab5c
+44	793	7852451816284900	CMakeFiles/LCD_I2C_default_default_XC8_compile.dir/D_/yiming/00work/LCD_I2C/LCD_I2C.X/mcc_generated_files/tmr1.c.p1	356a269e7d73b4eb
+38	799	7852451816224841	CMakeFiles/LCD_I2C_default_default_XC8_compile.dir/D_/yiming/00work/LCD_I2C/LCD_I2C.X/mcc_generated_files/pin_manager.c.p1	83bf366b6eb32a09
+6	314	7852342404288386	CMakeFiles/LCD_I2C_default_default_XC8_compile.dir/D_/yiming/00work/LCD_I2C/LCD_I2C.X/main.c.p1	bd68a6c440f0a9d3
+41	793	7852451816254836	CMakeFiles/LCD_I2C_default_default_XC8_compile.dir/D_/yiming/00work/LCD_I2C/LCD_I2C.X/mcc_generated_files/tmr0.c.p1	bd55f9d751594ea3
+10	753	7852451815943188	CMakeFiles/LCD_I2C_default_default_XC8_compile.dir/D_/yiming/00work/LCD_I2C/LCD_I2C.X/Key.c.p1	b9c30c7637db4edf
+32	751	7852451816154830	CMakeFiles/LCD_I2C_default_default_XC8_compile.dir/D_/yiming/00work/LCD_I2C/LCD_I2C.X/mcc_generated_files/interrupt_manager.c.p1	581a7b35e747b81b
+14	650	7852451815983166	CMakeFiles/LCD_I2C_default_default_XC8_compile.dir/D_/yiming/00work/LCD_I2C/LCD_I2C.X/TimerEven.c.p1	822c1604927369c9
+34	757	7852451816184845	CMakeFiles/LCD_I2C_default_default_XC8_compile.dir/D_/yiming/00work/LCD_I2C/LCD_I2C.X/mcc_generated_files/mcc.c.p1	1d0cfc5ec74594be
+17	769	7852451816013220	CMakeFiles/LCD_I2C_default_default_XC8_compile.dir/D_/yiming/00work/LCD_I2C/LCD_I2C.X/hd44780_i2c.c.p1	65715949a3430501
+28	786	7852451816124855	CMakeFiles/LCD_I2C_default_default_XC8_compile.dir/D_/yiming/00work/LCD_I2C/LCD_I2C.X/mcc_generated_files/i2c_master.c.p1	e5b7a39edfe74095
+314	1615	7852342407447238	D:/yiming/00work/LCD_I2C/LCD_I2C.X/out/LCD_I2C/default.elf	45b260c78f5c0ddb
+12	761	7852451815963186	CMakeFiles/LCD_I2C_default_default_XC8_compile.dir/D_/yiming/00work/LCD_I2C/LCD_I2C.X/RelayControl.c.p1	eabdd7528bf5d28b
+15	805	7852451815993177	CMakeFiles/LCD_I2C_default_default_XC8_compile.dir/D_/yiming/00work/LCD_I2C/LCD_I2C.X/eeprom.c.p1	7f0d80a50cb11476
