@@ -5272,7 +5272,7 @@ void KeepTimerCounter(void);
 # 1 "RelayControl.c" 2
 
 # 1 "./Key.h" 1
-# 22 "./Key.h"
+# 25 "./Key.h"
 typedef enum {
   KEY_IDLE = 0,
   KEY_DEBOUNCE,
@@ -5356,7 +5356,7 @@ void I2C_WriteNBytes(i2c_address_t address, uint8_t *data, size_t len);
 void I2C_ReadNBytes(i2c_address_t address, uint8_t *data, size_t len);
 void I2C_ReadDataBlock(i2c_address_t address, uint8_t reg, uint8_t *data, size_t len);
 # 7 "./hd44780_i2c.h" 2
-# 28 "./hd44780_i2c.h"
+# 29 "./hd44780_i2c.h"
 void LCD_Init(void);
 void LCD_SetCursor(uint8_t col, uint8_t row);
 void LCD_Print(const char *str);
@@ -5535,20 +5535,8 @@ void DispNormal(uint8_t mode, uint8_t n, uint16_t Num, char *buf) {
   if (n == 1) {
     strncpy(temp_str, RelayState_buf, sizeof(RelayState_buf));
   } else {
-
-    if (RelayState) {
-      temp_str[0] = 0x20;
-      temp_str[1] = 0x2D;
-    } else {
-      temp_str[0] = 0x5F;
-      temp_str[1] = 0x20;
-    }
-    if (fDOT) {
-      temp_str[2] = 0xff;
-    }
-    else {
-      temp_str[2] = 0x20;
-    }
+    strncpy(temp_str, "   ", sizeof(RelayState_buf));
+# 134 "RelayControl.c"
   }
 
   switch (mode) {
@@ -5675,6 +5663,7 @@ void Normal(void) {
     strncpy(RelayState_buf, "OFF", sizeof(RelayState_buf));
     LATCbits.LATC2 = 0;;
     do { LATCbits.LATC0 = ~LATCbits.LATC0; } while(0);
+
   }
 
 
@@ -5709,6 +5698,7 @@ void FunctionSet(void) {
     fLCD_updata = 1;
     LCD_DispMode = eTimeAdjustment;
     AdjustMode = eADJ_T1_DIG1;
+    Cursor_pos = 3;
     Number2Digital(SetTimer1_cnt, SetTimer1_digi);
     Number2Digital(SetTimer2_cnt, SetTimer2_digi);
     do { LATCbits.LATC0 = ~LATCbits.LATC0; } while(0);
@@ -5789,8 +5779,9 @@ void TimeAdjustment(void) {
     break;
   }
 
-  if (key[0].fShort) {
+  if (key[0].fShort||key[0].fLong_100ms) {
     key[0].fShort = 0;
+    key[0].fLong_100ms=0;
     fLCD_updata = 1;
     (*DigPtr)++;
     if (*DigPtr > 9)
@@ -5807,8 +5798,9 @@ void TimeAdjustment(void) {
     do { LATCbits.LATC0 = ~LATCbits.LATC0; } while(0);
   }
 
-  if (key[2].fShort) {
+  if (key[2].fShort||key[2].fLong_100ms) {
     key[2].fShort = 0;
+    key[2].fLong_100ms=0;
     fLCD_updata = 1;
     if (*DigPtr == 0)
       *DigPtr = 9;

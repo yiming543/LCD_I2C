@@ -5292,7 +5292,7 @@ void KeepTimerCounter(void);
 
 
 
-__asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); __asm("\tdb\t" "0x01" "," "0x00" "," "0x01" "," "0x00" "," "0x23" "," "0x00" "," "0xff" "," "0xff");
+__asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); __asm("\tdb\t" "0x03" "," "0x00" "," "0x23" "," "0x00" "," "0x23" "," "0x00" "," "0xff" "," "0xff");
 
 __asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); __asm("\tdb\t" "0xff" "," "0xff" "," "0xff" "," "0xff" "," "0xff" "," "0xff" "," "0xff" "," "0xff");
 

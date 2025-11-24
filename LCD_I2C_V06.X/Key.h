@@ -18,6 +18,9 @@
 #define KEY_DOWN_L key[2].fLong 
 #define KEY_OUT_L key[3].fLong 
 
+#define KEY_UP_L_100sm key[0].fLong_100ms 
+#define KEY_DOWN_L_100ms key[2].fLong_100ms
+
 // 按鍵狀態
 typedef enum {
   KEY_IDLE = 0,

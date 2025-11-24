@@ -616,8 +616,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;TimerEven.c: 32:   T0_1second_cnt++;
 [e ++ _T0_1second_cnt -> -> 1 `i `uc ]
 "33
-[; ;TimerEven.c: 33:   if (T0_1second_cnt >= 50) {
-[e $ ! >= -> _T0_1second_cnt `i -> 50 `i 357  ]
+[; ;TimerEven.c: 33:   if (T0_1second_cnt >= 100) {
+[e $ ! >= -> _T0_1second_cnt `i -> 100 `i 357  ]
 {
 "34
 [; ;TimerEven.c: 34:     T0_1second_cnt = 0;

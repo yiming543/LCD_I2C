@@ -5224,7 +5224,7 @@ void I2C_WriteNBytes(i2c_address_t address, uint8_t *data, size_t len);
 void I2C_ReadNBytes(i2c_address_t address, uint8_t *data, size_t len);
 void I2C_ReadDataBlock(i2c_address_t address, uint8_t reg, uint8_t *data, size_t len);
 # 7 "./hd44780_i2c.h" 2
-# 28 "./hd44780_i2c.h"
+# 29 "./hd44780_i2c.h"
 void LCD_Init(void);
 void LCD_SetCursor(uint8_t col, uint8_t row);
 void LCD_Print(const char *str);

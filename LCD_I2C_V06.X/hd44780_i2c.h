@@ -10,6 +10,7 @@
 #define FUNCTION_SET 0x20
 #define DISP_ON_CUR_OFF 0x0C
 #define DISP_ON_CUR_ON 0x0E
+#define DISP_ON_CUR_ON_BLOCK 0x0F
 // PCF8574定義
 #define PCF8574_ADDR 0x27  // 根據模組調整
 

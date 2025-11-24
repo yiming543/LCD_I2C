@@ -5335,7 +5335,7 @@ void TMR0_10msEven(void) {
   T0_10ms_cnt++;
   fT0_fT10ms = 1;
   T0_1second_cnt++;
-  if (T0_1second_cnt >= 50) {
+  if (T0_1second_cnt >= 100) {
     T0_1second_cnt = 0;
     fT0_1second = 1;
   }

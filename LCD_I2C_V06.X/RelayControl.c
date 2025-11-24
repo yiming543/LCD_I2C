@@ -117,20 +117,20 @@ void DispNormal(uint8_t mode, uint8_t n, uint16_t Num, char *buf) {
   if (n == _T1_) {
     strncpy(temp_str, RelayState_buf, sizeof(RelayState_buf));
   } else {
-    // strncpy(temp_str, "   ", sizeof(RelayState_buf));
-    if (RelayState) {
-      temp_str[0] = 0x20; // space
-      temp_str[1] = 0x2D; //-
-    } else {
-      temp_str[0] = 0x5F; //_
-      temp_str[1] = 0x20; // space
-    }
-    if (fDOT) {
-      temp_str[2] = 0xff; //block
-    }
-    else {
-      temp_str[2] = 0x20; // space
-    }
+    strncpy(temp_str, "   ", sizeof(RelayState_buf));
+    // if (RelayState) {
+    //   temp_str[0] = 0x20; // space
+    //   temp_str[1] = 0x2D; //-
+    // } else {
+    //   temp_str[0] = 0x5F; //_
+    //   temp_str[1] = 0x20; // space
+    // }
+    // if (fDOT) {
+    //   temp_str[2] = 0xff; //block
+    // }
+    // else {
+    //   temp_str[2] = 0x20; // space
+    // }
   }
 
   switch (mode) {
@@ -257,6 +257,7 @@ void Normal(void) {
     strncpy(RelayState_buf, "OFF", sizeof(RelayState_buf));
     RELAY_OFF;
     short_led_Toggle();
+
   }
 
   // Relay ON/OFF
@@ -291,6 +292,7 @@ void FunctionSet(void) {
     fLCD_updata = 1;
     LCD_DispMode = eTimeAdjustment;
     AdjustMode = eADJ_T1_DIG1;
+    Cursor_pos = 3;
     Number2Digital(SetTimer1_cnt, SetTimer1_digi);
     Number2Digital(SetTimer2_cnt, SetTimer2_digi);
     short_led_Toggle();
@@ -371,8 +373,9 @@ void TimeAdjustment(void) {
     break;
   }
 
-  if (KEY_UP_S) {
+  if (KEY_UP_S||KEY_UP_L_100sm) {
     KEY_UP_S = 0;
+    KEY_UP_L_100sm=0;
     fLCD_updata = 1;
     (*DigPtr)++;
     if (*DigPtr > MAX_NUM)
@@ -389,8 +392,9 @@ void TimeAdjustment(void) {
     short_led_Toggle();
   }
 
-  if (KEY_DOWN_S) {
+  if (KEY_DOWN_S||KEY_DOWN_L_100ms) {
     KEY_DOWN_S = 0;
+    KEY_DOWN_L_100ms=0;
     fLCD_updata = 1;
     if (*DigPtr == MIN_NUM)
       *DigPtr = 9;

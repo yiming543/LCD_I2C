@@ -74,9 +74,12 @@
 // 加快按鍵速度 短按 10ms
 // 加快按鍵速度 長按 400ms
 
-// 20251124 V06 CS:B982
+// 20251124 V06 CS:6A95
 // 設定完成將資料存入EEPROM
 // 修正顯示問題
+// 改成有資料更新才更新LCD，避免LCD閃爍
+// 增加K1&K3長按功能
+//
 
 #include "Key.h"
 #include "RelayControl.h"
@@ -85,6 +88,7 @@
 #include "hd44780_i2c.h"
 #include "mcc_generated_files/mcc.h"
 #include "mcc_generated_files/pin_manager.h"
+#include <builtins.h>
 #include <pic.h>
 
 int main(void) {
@@ -105,13 +109,23 @@ int main(void) {
   LCD_Init();
 
   // 開機LCD顯示
-  // LCD_SetCursor(0, 0); // 第一行第一格
-  // DispNormal(TimeMode, _T1_, SetTimer1_cnt, buf);
-  // LCD_Print(buf);
+  LCD_SetCursor(0, 0); // 第一行第一格
+  sprintf(buf, "Welcome to LFA. ");
+  LCD_Print(buf);
 
-  // LCD_SetCursor(0, 1); // 第二行第一格
-  // DispNormal(TimeMode, _T2_, SetTimer2_cnt, buf);
-  // LCD_Print(buf);
+  LCD_SetCursor(0, 1); // 第二行第一格
+  sprintf(buf, "Lamp test tool. ");
+  LCD_Print(buf);
+  __delay_ms(1500);
+
+  LCD_SetCursor(0, 0); // 第一行第一格
+  sprintf(buf, "Edit:EE Yiming  ");
+  LCD_Print(buf);
+
+  LCD_SetCursor(0, 1); // 第二行第一格
+  sprintf(buf, "Version: 0.60   ");
+  LCD_Print(buf);
+  __delay_ms(1500);
 
   while (1) {
     // 10ms 進入一次    // 更新按鍵狀態
@@ -127,12 +141,15 @@ int main(void) {
 
     // 每秒更新LCD晝面
     if (fT0_1second || fLCD_updata) {
+      if (fLCD_updata) {
+        TimeModeSelect();
+      }
       fT0_1second = 0;
       fLCD_updata = 0;
-      if (OutState)
-        fDOT = !fDOT;
-      else
-        fDOT = 0;
+      // if (OutState)
+      //   fDOT = !fDOT;
+      // else
+      //   fDOT = 0;
       // LCD_Command(CLEAR_DISPLAY);
       switch (LCD_DispMode) {
       case eNormal:
@@ -143,6 +160,8 @@ int main(void) {
         LCD_SetCursor(0, 1); // 第2行第
         DispNormal(TimeMode, _T2_, SetTimer2_cnt, buf);
         LCD_Print(buf);
+        LCD_SetCursor(14, 1); // 第2行第
+        LCD_SetCursor(13, 0); // 第1行
         break;
 
       case eFunctionSet:
@@ -152,6 +171,7 @@ int main(void) {
         LCD_SetCursor(0, 1); // 第2行
         DispFunctionSet(TimeMode, _T2_, SetTimer2_cnt, buf);
         LCD_Print(buf);
+        LCD_SetCursor(13, 1); // 第2行
         break;
 
       case eTimeAdjustment:
@@ -163,7 +183,7 @@ int main(void) {
         LCD_Print(buf);
 
         LCD_SetCursor(Cursor_pos, 0); // 第1行
-        LCD_Command(DISP_ON_CUR_ON);  // Display ON, Cursor OFF
+        // LCD_Command(DISP_ON_CUR_ON);  // Display ON, Cursor OFF
         break;
 
       default:

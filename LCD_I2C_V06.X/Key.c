@@ -3,8 +3,8 @@
 #include "Key.h"
 
 #define DEBOUNCE_MS 10
-#define SHORT_PRESS_MS 10
-#define LONG_PRESS_MS 400
+#define SHORT_PRESS_MS 20
+#define LONG_PRESS_MS 300
 #define LONG_PRESS_100MS 40
 #define SCAN_INTERVAL 10 // 單位：ms，每次 KEY_Scan 呼叫間隔
 
@@ -33,24 +33,24 @@ void KEY_ScanAll(void) {
 
     switch (k->state) {
     case KEY_IDLE:
-      k->release_time_ms = 0;
+      // k->release_time_ms = 0;
       k->press_long_time_ms=0;
       k->press_time_ms = 0;
-      if (k->fKeyIn == KEY_PRESS) { // 偵測按下
-        k->state = KEY_DEBOUNCE;
-      }
-      break;
+    //   if (k->fKeyIn == KEY_PRESS) { // 偵測按下
+    //     k->state = KEY_DEBOUNCE;
+    //   }
+    //   break;
 
-    case KEY_DEBOUNCE:
+    // case KEY_DEBOUNCE:
       if (k->fKeyIn == KEY_PRESS) {
-        k->press_time_ms += SCAN_INTERVAL;
-        if (k->press_time_ms >= DEBOUNCE_MS) {
+        // k->press_time_ms += SCAN_INTERVAL;
+        // if (k->press_time_ms >= DEBOUNCE_MS) {
           // k->press_time_ms = 0;
           k->state = KEY_PRESSED;
         }
-      } else {
-        k->state = KEY_IDLE;
-      }
+      // } else {
+      //   k->state = KEY_IDLE;
+      // }
       break;
 
     case KEY_PRESSED:

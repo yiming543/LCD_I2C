@@ -3,8 +3,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Key.c: 11: KEY_T key[4];
 [c E2717 0 1 2 3 4 5 .. ]
 [n E2717 . KEY_IDLE KEY_DEBOUNCE KEY_PRESSED KEY_SHORT KEY_LONG KEY_RELEASE  ]
-"32 ./Key.h
-[; ;./Key.h: 32: typedef struct {
+"35 ./Key.h
+[; ;./Key.h: 35: typedef struct {
 [s S354 `E2717 1 `us 1 `us 1 `us 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
 [n S354 . state press_time_ms press_long_time_ms release_time_ms fLong fLong_100ms fShort fKeyIn ]
 "54 C:/Users/t00904/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1936.h
@@ -593,42 +593,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "35
 [; ;Key.c: 35:     case KEY_IDLE:
 [e :U 365 ]
-"36
-[; ;Key.c: 36:       k->release_time_ms = 0;
-[e = . *U _k 3 -> -> 0 `i `us ]
 "37
 [; ;Key.c: 37:       k->press_long_time_ms=0;
 [e = . *U _k 2 -> -> 0 `i `us ]
 "38
 [; ;Key.c: 38:       k->press_time_ms = 0;
 [e = . *U _k 1 -> -> 0 `i `us ]
-"39
-[; ;Key.c: 39:       if (k->fKeyIn == 1) {
-[e $ ! == -> . *U _k 7 `i -> 1 `i 366  ]
-{
-"40
-[; ;Key.c: 40:         k->state = KEY_DEBOUNCE;
-[e = . *U _k 0 . `E2717 1 ]
-"41
-[; ;Key.c: 41:       }
-}
-[e :U 366 ]
-"42
-[; ;Key.c: 42:       break;
-[e $U 363  ]
-"44
-[; ;Key.c: 44:     case KEY_DEBOUNCE:
-[e :U 367 ]
 "45
 [; ;Key.c: 45:       if (k->fKeyIn == 1) {
-[e $ ! == -> . *U _k 7 `i -> 1 `i 368  ]
-{
-"46
-[; ;Key.c: 46:         k->press_time_ms += 10;
-[e =+ . *U _k 1 -> -> 10 `i `us ]
-"47
-[; ;Key.c: 47:         if (k->press_time_ms >= 10) {
-[e $ ! >= -> . *U _k 1 `ui -> -> 10 `i `ui 369  ]
+[e $ ! == -> . *U _k 7 `i -> 1 `i 366  ]
 {
 "49
 [; ;Key.c: 49:           k->state = KEY_PRESSED;
@@ -636,36 +609,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 "50
 [; ;Key.c: 50:         }
 }
-[e :U 369 ]
-"51
-[; ;Key.c: 51:       } else {
-}
-[e $U 370  ]
-[e :U 368 ]
-{
-"52
-[; ;Key.c: 52:         k->state = KEY_IDLE;
-[e = . *U _k 0 . `E2717 0 ]
-"53
-[; ;Key.c: 53:       }
-}
-[e :U 370 ]
+[e :U 366 ]
 "54
 [; ;Key.c: 54:       break;
 [e $U 363  ]
 "56
 [; ;Key.c: 56:     case KEY_PRESSED:
-[e :U 371 ]
+[e :U 367 ]
 "57
 [; ;Key.c: 57:       if (k->fKeyIn == 1) {
-[e $ ! == -> . *U _k 7 `i -> 1 `i 372  ]
+[e $ ! == -> . *U _k 7 `i -> 1 `i 368  ]
 {
 "58
 [; ;Key.c: 58:         k->press_time_ms += 10;
 [e =+ . *U _k 1 -> -> 10 `i `us ]
 "59
-[; ;Key.c: 59:         if (k->press_time_ms >= 400) {
-[e $ ! >= -> . *U _k 1 `ui -> -> 400 `i `ui 373  ]
+[; ;Key.c: 59:         if (k->press_time_ms >= 300) {
+[e $ ! >= -> . *U _k 1 `ui -> -> 300 `i `ui 369  ]
 {
 "60
 [; ;Key.c: 60:           k->fLong = 1;
@@ -679,12 +639,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "63
 [; ;Key.c: 63:         }
 }
-[e :U 373 ]
+[e :U 369 ]
 "64
 [; ;Key.c: 64:       } else {
 }
-[e $U 374  ]
-[e :U 372 ]
+[e $U 370  ]
+[e :U 368 ]
 {
 "65
 [; ;Key.c: 65:         k->release_time_ms = 0;
@@ -695,23 +655,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 "67
 [; ;Key.c: 67:       }
 }
-[e :U 374 ]
+[e :U 370 ]
 "68
 [; ;Key.c: 68:       break;
 [e $U 363  ]
 "70
 [; ;Key.c: 70:     case KEY_LONG:
-[e :U 375 ]
+[e :U 371 ]
 "71
 [; ;Key.c: 71:       if (k->fKeyIn == 1) {
-[e $ ! == -> . *U _k 7 `i -> 1 `i 376  ]
+[e $ ! == -> . *U _k 7 `i -> 1 `i 372  ]
 {
 "72
 [; ;Key.c: 72:         k->press_long_time_ms += 10;
 [e =+ . *U _k 2 -> -> 10 `i `us ]
 "73
 [; ;Key.c: 73:         if (k->press_long_time_ms >= 40) {
-[e $ ! >= -> . *U _k 2 `ui -> -> 40 `i `ui 377  ]
+[e $ ! >= -> . *U _k 2 `ui -> -> 40 `i `ui 373  ]
 {
 "74
 [; ;Key.c: 74:           k->press_long_time_ms = 0;
@@ -722,12 +682,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "76
 [; ;Key.c: 76:         }
 }
-[e :U 377 ]
+[e :U 373 ]
 "77
 [; ;Key.c: 77:       } else {
 }
-[e $U 378  ]
-[e :U 376 ]
+[e $U 374  ]
+[e :U 372 ]
 {
 "78
 [; ;Key.c: 78:         k->press_time_ms=0;
@@ -741,25 +701,25 @@ Version 4.0 HI-TECH Software Intermediate Code
 "81
 [; ;Key.c: 81:       }
 }
-[e :U 378 ]
+[e :U 374 ]
 "82
 [; ;Key.c: 82:       break;
 [e $U 363  ]
 "84
 [; ;Key.c: 84:     case KEY_RELEASE:
-[e :U 379 ]
+[e :U 375 ]
 "85
 [; ;Key.c: 85:       k->release_time_ms += 10;
 [e =+ . *U _k 3 -> -> 10 `i `us ]
 "86
 [; ;Key.c: 86:       if (k->release_time_ms >= 10) {
-[e $ ! >= -> . *U _k 3 `ui -> -> 10 `i `ui 380  ]
+[e $ ! >= -> . *U _k 3 `ui -> -> 10 `i `ui 376  ]
 {
 "87
-[; ;Key.c: 87:         if (k->press_time_ms >= 10 &&
-[e $ ! && >= -> . *U _k 1 `ui -> -> 10 `i `ui < -> . *U _k 1 `ui -> -> 400 `i `ui 381  ]
+[; ;Key.c: 87:         if (k->press_time_ms >= 20 &&
+[e $ ! && >= -> . *U _k 1 `ui -> -> 20 `i `ui < -> . *U _k 1 `ui -> -> 300 `i `ui 377  ]
 "88
-[; ;Key.c: 88:             k->press_time_ms < 400) {
+[; ;Key.c: 88:             k->press_time_ms < 300) {
 {
 "89
 [; ;Key.c: 89:               k->fShort = 1;
@@ -770,8 +730,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "91
 [; ;Key.c: 91:             } else {
 }
-[e $U 382  ]
-[e :U 381 ]
+[e $U 378  ]
+[e :U 377 ]
 {
 "92
 [; ;Key.c: 92:               k->state = KEY_IDLE;
@@ -782,17 +742,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "94
 [; ;Key.c: 94:             }
 }
-[e :U 382 ]
+[e :U 378 ]
 "95
 [; ;Key.c: 95:           }
 }
-[e :U 380 ]
+[e :U 376 ]
 "96
 [; ;Key.c: 96:           break;
 [e $U 363  ]
 "98
 [; ;Key.c: 98:     case KEY_SHORT:
-[e :U 383 ]
+[e :U 379 ]
 "99
 [; ;Key.c: 99:       k->state = KEY_IDLE;
 [e = . *U _k 0 . `E2717 0 ]
@@ -801,7 +761,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 363  ]
 "102
 [; ;Key.c: 102:     default:
-[e :U 384 ]
+[e :U 380 ]
 "103
 [; ;Key.c: 103:       break;
 [e $U 363  ]
@@ -811,12 +771,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 363  ]
 [e :U 364 ]
 [e [\ -> . *U _k 0 `ui , $ -> . `E2717 0 `ui 365
- , $ -> . `E2717 1 `ui 367
- , $ -> . `E2717 2 `ui 371
- , $ -> . `E2717 4 `ui 375
- , $ -> . `E2717 5 `ui 379
- , $ -> . `E2717 3 `ui 383
- 384 ]
+ , $ -> . `E2717 2 `ui 367
+ , $ -> . `E2717 4 `ui 371
+ , $ -> . `E2717 5 `ui 375
+ , $ -> . `E2717 3 `ui 379
+ 380 ]
 [e :U 363 ]
 "105
 [; ;Key.c: 105:   }

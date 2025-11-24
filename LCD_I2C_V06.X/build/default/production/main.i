@@ -7,7 +7,7 @@
 # 1 "C:/Users/t00904/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
-# 81 "main.c"
+# 84 "main.c"
 # 1 "./Key.h" 1
 
 
@@ -121,7 +121,7 @@ typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 149 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 2 3
 # 5 "./Key.h" 2
-# 22 "./Key.h"
+# 25 "./Key.h"
 typedef enum {
   KEY_IDLE = 0,
   KEY_DEBOUNCE,
@@ -151,7 +151,7 @@ extern double LongKey_cnt;
 
 void KEY_ScanAll(void);
 void KEY_Init(void);
-# 82 "main.c" 2
+# 85 "main.c" 2
 # 1 "./RelayControl.h" 1
 
 
@@ -5316,7 +5316,7 @@ void TimeAdjustment(void);
 
 
 void KeepTimerCounter(void);
-# 83 "main.c" 2
+# 86 "main.c" 2
 # 1 "./TimerEven.h" 1
 
 
@@ -5343,14 +5343,14 @@ extern uint16_t xComm_cnt;
 extern uint16_t T1_10ms_cnt;
 extern uint16_t T1_100ms_cnt;
 extern uint16_t T1_1000ms_cnt;
-# 84 "main.c" 2
+# 87 "main.c" 2
 # 1 "./eeprom.h" 1
 # 12 "./eeprom.h"
 void POWER_ON_EEPROM_READ(void);
 
 void EEPROM_WriteWord(uint8_t address, uint16_t value);
 uint16_t EEPROM_ReadWord(uint8_t address);
-# 85 "main.c" 2
+# 88 "main.c" 2
 # 1 "./hd44780_i2c.h" 1
 
 
@@ -5367,14 +5367,32 @@ void I2C_WriteNBytes(i2c_address_t address, uint8_t *data, size_t len);
 void I2C_ReadNBytes(i2c_address_t address, uint8_t *data, size_t len);
 void I2C_ReadDataBlock(i2c_address_t address, uint8_t reg, uint8_t *data, size_t len);
 # 7 "./hd44780_i2c.h" 2
-# 28 "./hd44780_i2c.h"
+# 29 "./hd44780_i2c.h"
 void LCD_Init(void);
 void LCD_SetCursor(uint8_t col, uint8_t row);
 void LCD_Print(const char *str);
 void LCD_Command(uint8_t cmd);
-# 86 "main.c" 2
+# 89 "main.c" 2
 
 
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\builtins.h" 1 3
+
+
+
+
+
+
+#pragma intrinsic(__nop)
+extern void __nop(void);
+# 19 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\builtins.h" 3
+#pragma intrinsic(_delay)
+extern __attribute__((nonreentrant)) void _delay(uint32_t);
+#pragma intrinsic(_delaywdt)
+extern __attribute__((nonreentrant)) void _delaywdt(uint32_t);
+
+#pragma intrinsic(_delay3)
+extern __attribute__((nonreentrant)) void _delay3(uint8_t);
+# 92 "main.c" 2
 
 
 int main(void) {
@@ -5393,7 +5411,26 @@ int main(void) {
   POWER_ON_EEPROM_READ();
   KEY_Init();
   LCD_Init();
-# 116 "main.c"
+
+
+  LCD_SetCursor(0, 0);
+  sprintf(buf, "Welcome to LFA. ");
+  LCD_Print(buf);
+
+  LCD_SetCursor(0, 1);
+  sprintf(buf, "Lamp test tool. ");
+  LCD_Print(buf);
+  _delay((unsigned long)((1500)*(32000000/4000.0)));
+
+  LCD_SetCursor(0, 0);
+  sprintf(buf, "Edit:EE Yiming  ");
+  LCD_Print(buf);
+
+  LCD_SetCursor(0, 1);
+  sprintf(buf, "Version: 0.60   ");
+  LCD_Print(buf);
+  _delay((unsigned long)((1500)*(32000000/4000.0)));
+
   while (1) {
 
     if (fT0_fT10ms) {
@@ -5408,12 +5445,15 @@ int main(void) {
 
 
     if (fT0_1second || fLCD_updata) {
+      if (fLCD_updata) {
+        TimeModeSelect();
+      }
       fT0_1second = 0;
       fLCD_updata = 0;
-      if (OutState)
-        fDOT = !fDOT;
-      else
-        fDOT = 0;
+
+
+
+
 
       switch (LCD_DispMode) {
       case eNormal:
@@ -5424,6 +5464,8 @@ int main(void) {
         LCD_SetCursor(0, 1);
         DispNormal(TimeMode, 2, SetTimer2_cnt, buf);
         LCD_Print(buf);
+        LCD_SetCursor(14, 1);
+        LCD_SetCursor(13, 0);
         break;
 
       case eFunctionSet:
@@ -5433,6 +5475,7 @@ int main(void) {
         LCD_SetCursor(0, 1);
         DispFunctionSet(TimeMode, 2, SetTimer2_cnt, buf);
         LCD_Print(buf);
+        LCD_SetCursor(13, 1);
         break;
 
       case eTimeAdjustment:
@@ -5444,7 +5487,7 @@ int main(void) {
         LCD_Print(buf);
 
         LCD_SetCursor(Cursor_pos, 0);
-        LCD_Command(0x0E);
+
         break;
 
       default:

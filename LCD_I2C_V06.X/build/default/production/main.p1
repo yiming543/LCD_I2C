@@ -38,25 +38,41 @@ Version 4.0 HI-TECH Software Intermediate Code
 "12 ./eeprom.h
 [; ;./eeprom.h: 12: void POWER_ON_EEPROM_READ(void);
 [v _POWER_ON_EEPROM_READ `(v ~T0 @X0 0 ef ]
-"50 ./Key.h
-[; ;./Key.h: 50: void KEY_Init(void);
+"53 ./Key.h
+[; ;./Key.h: 53: void KEY_Init(void);
 [v _KEY_Init `(v ~T0 @X0 0 ef ]
-"28 ./hd44780_i2c.h
-[; ;./hd44780_i2c.h: 28: void LCD_Init(void);
+"29 ./hd44780_i2c.h
+[; ;./hd44780_i2c.h: 29: void LCD_Init(void);
 [v _LCD_Init `(v ~T0 @X0 0 ef ]
+"30
+[; ;./hd44780_i2c.h: 30: void LCD_SetCursor(uint8_t col, uint8_t row);
+[v _LCD_SetCursor `(v ~T0 @X0 0 ef2`uc`uc ]
+"121 C:\Program Files\Microchip\xc8\v2.46\pic\include\c99\stdio.h
+[; ;C:\Program Files\Microchip\xc8\v2.46\pic\include\c99\stdio.h: 121: int sprintf(char *restrict, const char *restrict, ...);
+[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+"51 ./RelayControl.h
+[; ;./RelayControl.h: 51: extern char buf[17];
+[v _buf `uc ~T0 @X0 -> 0 `x e ]
+"31 ./hd44780_i2c.h
+[; ;./hd44780_i2c.h: 31: void LCD_Print(const char *str);
+[v _LCD_Print `(v ~T0 @X0 0 ef1`*Cuc ]
+[v F3284 `(v ~T0 @X0 1 tf1`ul ]
+"20 C:\Program Files\Microchip\xc8\v2.46\pic\include\builtins.h
+[v __delay `JF3284 ~T0 @X0 0 e ]
+[p i __delay ]
 "10 ./TimerEven.h
 [; ;./TimerEven.h: 10: extern _Bool fT0_fT10ms;
 [v _fT0_fT10ms `a ~T0 @X0 0 e ]
-"121 main.c
-[; ;main.c: 121:       key[0].fKeyIn = (PORTBbits.RB0 == 0);
+"135 main.c
+[; ;main.c: 135:       key[0].fKeyIn = (PORTBbits.RB0 == 0);
 [c E36 0 1 2 3 4 5 .. ]
 [n E36 . KEY_IDLE KEY_DEBOUNCE KEY_PRESSED KEY_SHORT KEY_LONG KEY_RELEASE  ]
-"32 ./Key.h
-[; ;./Key.h: 32: typedef struct {
+"35 ./Key.h
+[; ;./Key.h: 35: typedef struct {
 [s S1 `E36 1 `us 1 `us 1 `us 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
 [n S1 . state press_time_ms press_long_time_ms release_time_ms fLong fLong_100ms fShort fKeyIn ]
-"43
-[; ;./Key.h: 43: extern KEY_T key[4];
+"46
+[; ;./Key.h: 46: extern KEY_T key[4];
 [v _key `S1 ~T0 @X0 -> 0 `x e ]
 "497 C:/Users/t00904/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1936.h
 [; ;C:/Users/t00904/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1936.h: 497:     struct {
@@ -69,19 +85,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "508
 [; ;C:/Users/t00904/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1936.h: 508: extern volatile PORTBbits_t PORTBbits __attribute__((address(0x00D)));
 [v _PORTBbits `VS36 ~T0 @X0 0 e@13 ]
-"49 ./Key.h
-[; ;./Key.h: 49: void KEY_ScanAll(void);
+"52 ./Key.h
+[; ;./Key.h: 52: void KEY_ScanAll(void);
 [v _KEY_ScanAll `(v ~T0 @X0 0 ef ]
 "11 ./TimerEven.h
 [; ;./TimerEven.h: 11: extern _Bool fT0_1second;
 [v _fT0_1second `a ~T0 @X0 0 e ]
-"54 ./RelayControl.h
-[; ;./RelayControl.h: 54: extern _Bool OutState;
-[v _OutState `a ~T0 @X0 0 e ]
-"29 ./hd44780_i2c.h
-[; ;./hd44780_i2c.h: 29: void LCD_SetCursor(uint8_t col, uint8_t row);
-[v _LCD_SetCursor `(v ~T0 @X0 0 ef2`uc`uc ]
-"66 ./RelayControl.h
+"67 ./RelayControl.h
+[; ;./RelayControl.h: 67: void TimeModeSelect(void);
+[v _TimeModeSelect `(v ~T0 @X0 0 ef ]
+"66
 [; ;./RelayControl.h: 66: void DispNormal(uint8_t mode, uint8_t n, uint16_t Num, char *buf);
 [v _DispNormal `(v ~T0 @X0 0 ef4`uc`uc`us`*uc ]
 "47
@@ -90,19 +103,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "52
 [; ;./RelayControl.h: 52: extern uint16_t SetTimer1_cnt;
 [v _SetTimer1_cnt `us ~T0 @X0 0 e ]
-"51
-[; ;./RelayControl.h: 51: extern char buf[17];
-[v _buf `uc ~T0 @X0 -> 0 `x e ]
-"30 ./hd44780_i2c.h
-[; ;./hd44780_i2c.h: 30: void LCD_Print(const char *str);
-[v _LCD_Print `(v ~T0 @X0 0 ef1`*Cuc ]
-"53 ./RelayControl.h
+"53
 [; ;./RelayControl.h: 53: extern uint16_t SetTimer2_cnt;
 [v _SetTimer2_cnt `us ~T0 @X0 0 e ]
-"121 C:\Program Files\Microchip\xc8\v2.46\pic\include\c99\stdio.h
-[; ;C:\Program Files\Microchip\xc8\v2.46\pic\include\c99\stdio.h: 121: int sprintf(char *restrict, const char *restrict, ...);
-[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
-"68 ./RelayControl.h
+"68
 [; ;./RelayControl.h: 68: void DispFunctionSet(uint8_t mode, uint8_t n, uint16_t Num, char *buf);
 [v _DispFunctionSet `(v ~T0 @X0 0 ef4`uc`uc`us`*uc ]
 "69
@@ -111,14 +115,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "49
 [; ;./RelayControl.h: 49: extern uint8_t Cursor_pos;
 [v _Cursor_pos `uc ~T0 @X0 0 e ]
-"31 ./hd44780_i2c.h
-[; ;./hd44780_i2c.h: 31: void LCD_Command(uint8_t cmd);
-[v _LCD_Command `(v ~T0 @X0 0 ef1`uc ]
-"58 ./RelayControl.h
+"58
 [; ;./RelayControl.h: 58: extern uint8_t LCD_DispMode;
 [v _LCD_DispMode `uc ~T0 @X0 0 e ]
-"171 main.c
-[; ;main.c: 171:       }
+"191 main.c
+[; ;main.c: 191:       }
 [c E3170 0 1 2 .. ]
 [n E3170 DISP_MODE eNormal eFunctionSet eTimeAdjustment  ]
 "71 ./RelayControl.h
@@ -632,255 +633,304 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./RelayControl.h: 60: _Bool fDOT;
 [v _fDOT `a ~T0 @X0 1 e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"90 main.c
-[; ;main.c: 90: int main(void) {
+"94 main.c
+[; ;main.c: 94: int main(void) {
 [v _main `(i ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"92
-[; ;main.c: 92:   SYSTEM_Initialize();
+"96
+[; ;main.c: 96:   SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"93
-[; ;main.c: 93:   TMR0_SetInterruptHandler(TMR0_10msEven);
-[e ( _TMR0_SetInterruptHandler (1 &U _TMR0_10msEven ]
-"94
-[; ;main.c: 94:   TMR1_SetInterruptHandler(TMR1_10msEven);
-[e ( _TMR1_SetInterruptHandler (1 &U _TMR1_10msEven ]
 "97
-[; ;main.c: 97:   (INTCONbits.GIE = 1);
+[; ;main.c: 97:   TMR0_SetInterruptHandler(TMR0_10msEven);
+[e ( _TMR0_SetInterruptHandler (1 &U _TMR0_10msEven ]
+"98
+[; ;main.c: 98:   TMR1_SetInterruptHandler(TMR1_10msEven);
+[e ( _TMR1_SetInterruptHandler (1 &U _TMR1_10msEven ]
+"101
+[; ;main.c: 101:   (INTCONbits.GIE = 1);
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"100
-[; ;main.c: 100:   (INTCONbits.PEIE = 1);
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"102
-[; ;main.c: 102:   RelayControl_Init();
-[e ( _RelayControl_Init ..  ]
-"103
-[; ;main.c: 103:   POWER_ON_EEPROM_READ();
-[e ( _POWER_ON_EEPROM_READ ..  ]
 "104
-[; ;main.c: 104:   KEY_Init();
+[; ;main.c: 104:   (INTCONbits.PEIE = 1);
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+"106
+[; ;main.c: 106:   RelayControl_Init();
+[e ( _RelayControl_Init ..  ]
+"107
+[; ;main.c: 107:   POWER_ON_EEPROM_READ();
+[e ( _POWER_ON_EEPROM_READ ..  ]
+"108
+[; ;main.c: 108:   KEY_Init();
 [e ( _KEY_Init ..  ]
-"105
-[; ;main.c: 105:   LCD_Init();
+"109
+[; ;main.c: 109:   LCD_Init();
 [e ( _LCD_Init ..  ]
+"112
+[; ;main.c: 112:   LCD_SetCursor(0, 0);
+[e ( _LCD_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+"113
+[; ;main.c: 113:   sprintf(buf, "Welcome to LFA. ");
+[e ( _sprintf (1 , &U _buf :s 1C ]
+"114
+[; ;main.c: 114:   LCD_Print(buf);
+[e ( _LCD_Print (1 -> &U _buf `*Cuc ]
 "116
-[; ;main.c: 116:   while (1) {
+[; ;main.c: 116:   LCD_SetCursor(0, 1);
+[e ( _LCD_SetCursor (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
+"117
+[; ;main.c: 117:   sprintf(buf, "Lamp test tool. ");
+[e ( _sprintf (1 , &U _buf :s 2C ]
+"118
+[; ;main.c: 118:   LCD_Print(buf);
+[e ( _LCD_Print (1 -> &U _buf `*Cuc ]
+"119
+[; ;main.c: 119:   _delay((unsigned long)((1500)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"121
+[; ;main.c: 121:   LCD_SetCursor(0, 0);
+[e ( _LCD_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+"122
+[; ;main.c: 122:   sprintf(buf, "Edit:EE Yiming  ");
+[e ( _sprintf (1 , &U _buf :s 3C ]
+"123
+[; ;main.c: 123:   LCD_Print(buf);
+[e ( _LCD_Print (1 -> &U _buf `*Cuc ]
+"125
+[; ;main.c: 125:   LCD_SetCursor(0, 1);
+[e ( _LCD_SetCursor (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
+"126
+[; ;main.c: 126:   sprintf(buf, "Version: 0.60   ");
+[e ( _sprintf (1 , &U _buf :s 4C ]
+"127
+[; ;main.c: 127:   LCD_Print(buf);
+[e ( _LCD_Print (1 -> &U _buf `*Cuc ]
+"128
+[; ;main.c: 128:   _delay((unsigned long)((1500)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"130
+[; ;main.c: 130:   while (1) {
 [e :U 359 ]
 {
-"118
-[; ;main.c: 118:     if (fT0_fT10ms) {
+"132
+[; ;main.c: 132:     if (fT0_fT10ms) {
 [e $ ! != -> _fT0_fT10ms `i -> 0 `i 361  ]
 {
-"119
-[; ;main.c: 119:       fT0_fT10ms = 0;
+"133
+[; ;main.c: 133:       fT0_fT10ms = 0;
 [e = _fT0_fT10ms -> -> 0 `i `a ]
-"121
-[; ;main.c: 121:       key[0].fKeyIn = (PORTBbits.RB0 == 0);
+"135
+[; ;main.c: 135:       key[0].fKeyIn = (PORTBbits.RB0 == 0);
 [e = . *U + &U _key * -> -> -> 0 `i `ui `ux -> -> # *U &U _key `ui `ux 7 -> -> == -> . . _PORTBbits 0 0 `i -> 0 `i `i `uc ]
-"122
-[; ;main.c: 122:       key[1].fKeyIn = (PORTBbits.RB1 == 0);
+"136
+[; ;main.c: 136:       key[1].fKeyIn = (PORTBbits.RB1 == 0);
 [e = . *U + &U _key * -> -> -> 1 `i `ui `ux -> -> # *U &U _key `ui `ux 7 -> -> == -> . . _PORTBbits 0 1 `i -> 0 `i `i `uc ]
-"123
-[; ;main.c: 123:       key[2].fKeyIn = (PORTBbits.RB2 == 0);
+"137
+[; ;main.c: 137:       key[2].fKeyIn = (PORTBbits.RB2 == 0);
 [e = . *U + &U _key * -> -> -> 2 `i `ui `ux -> -> # *U &U _key `ui `ux 7 -> -> == -> . . _PORTBbits 0 2 `i -> 0 `i `i `uc ]
-"124
-[; ;main.c: 124:       key[3].fKeyIn = (PORTBbits.RB3 == 0);
+"138
+[; ;main.c: 138:       key[3].fKeyIn = (PORTBbits.RB3 == 0);
 [e = . *U + &U _key * -> -> -> 3 `i `ui `ux -> -> # *U &U _key `ui `ux 7 -> -> == -> . . _PORTBbits 0 3 `i -> 0 `i `i `uc ]
-"125
-[; ;main.c: 125:       KEY_ScanAll();
+"139
+[; ;main.c: 139:       KEY_ScanAll();
 [e ( _KEY_ScanAll ..  ]
-"126
-[; ;main.c: 126:     }
+"140
+[; ;main.c: 140:     }
 }
 [e :U 361 ]
-"129
-[; ;main.c: 129:     if (fT0_1second || fLCD_updata) {
+"143
+[; ;main.c: 143:     if (fT0_1second || fLCD_updata) {
 [e $ ! || != -> _fT0_1second `i -> 0 `i != -> _fLCD_updata `i -> 0 `i 362  ]
 {
-"130
-[; ;main.c: 130:       fT0_1second = 0;
-[e = _fT0_1second -> -> 0 `i `a ]
-"131
-[; ;main.c: 131:       fLCD_updata = 0;
-[e = _fLCD_updata -> -> 0 `i `a ]
-"132
-[; ;main.c: 132:       if (OutState)
-[e $ ! != -> _OutState `i -> 0 `i 363  ]
-"133
-[; ;main.c: 133:         fDOT = !fDOT;
-[e = _fDOT -> -> ! != -> _fDOT `i -> 0 `i `i `a ]
-[e $U 364  ]
-"134
-[; ;main.c: 134:       else
-[e :U 363 ]
-"135
-[; ;main.c: 135:         fDOT = 0;
-[e = _fDOT -> -> 0 `i `a ]
-[e :U 364 ]
-"137
-[; ;main.c: 137:       switch (LCD_DispMode) {
-[e $U 366  ]
-{
-"138
-[; ;main.c: 138:       case eNormal:
-[e :U 367 ]
-"139
-[; ;main.c: 139:         LCD_SetCursor(0, 0);
-[e ( _LCD_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-"140
-[; ;main.c: 140:         DispNormal(TimeMode, 1, SetTimer1_cnt, buf);
-[e ( _DispNormal (4 , , , _TimeMode -> -> 1 `i `uc _SetTimer1_cnt &U _buf ]
-"141
-[; ;main.c: 141:         LCD_Print(buf);
-[e ( _LCD_Print (1 -> &U _buf `*Cuc ]
-"143
-[; ;main.c: 143:         LCD_SetCursor(0, 1);
-[e ( _LCD_SetCursor (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
 "144
-[; ;main.c: 144:         DispNormal(TimeMode, 2, SetTimer2_cnt, buf);
-[e ( _DispNormal (4 , , , _TimeMode -> -> 2 `i `uc _SetTimer2_cnt &U _buf ]
+[; ;main.c: 144:       if (fLCD_updata) {
+[e $ ! != -> _fLCD_updata `i -> 0 `i 363  ]
+{
 "145
-[; ;main.c: 145:         LCD_Print(buf);
-[e ( _LCD_Print (1 -> &U _buf `*Cuc ]
+[; ;main.c: 145:         TimeModeSelect();
+[e ( _TimeModeSelect ..  ]
 "146
-[; ;main.c: 146:         break;
-[e $U 365  ]
-"148
-[; ;main.c: 148:       case eFunctionSet:
-[e :U 368 ]
-"149
-[; ;main.c: 149:         LCD_SetCursor(0, 0);
-[e ( _LCD_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-"150
-[; ;main.c: 150:         sprintf(buf, "FunctionSet Mode");
-[e ( _sprintf (1 , &U _buf :s 1C ]
-"151
-[; ;main.c: 151:         LCD_Print(buf);
-[e ( _LCD_Print (1 -> &U _buf `*Cuc ]
-"152
-[; ;main.c: 152:         LCD_SetCursor(0, 1);
-[e ( _LCD_SetCursor (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
-"153
-[; ;main.c: 153:         DispFunctionSet(TimeMode, 2, SetTimer2_cnt, buf);
-[e ( _DispFunctionSet (4 , , , _TimeMode -> -> 2 `i `uc _SetTimer2_cnt &U _buf ]
-"154
-[; ;main.c: 154:         LCD_Print(buf);
-[e ( _LCD_Print (1 -> &U _buf `*Cuc ]
-"155
-[; ;main.c: 155:         break;
-[e $U 365  ]
-"157
-[; ;main.c: 157:       case eTimeAdjustment:
-[e :U 369 ]
-"158
-[; ;main.c: 158:         LCD_SetCursor(0, 0);
-[e ( _LCD_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-"159
-[; ;main.c: 159:         DispTimeAdjustment(TimeMode, 1, SetTimer1_cnt, buf);
-[e ( _DispTimeAdjustment (4 , , , _TimeMode -> -> 1 `i `uc _SetTimer1_cnt &U _buf ]
-"160
-[; ;main.c: 160:         LCD_Print(buf);
-[e ( _LCD_Print (1 -> &U _buf `*Cuc ]
-"161
-[; ;main.c: 161:         LCD_SetCursor(0, 1);
-[e ( _LCD_SetCursor (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
-"162
-[; ;main.c: 162:         DispTimeAdjustment(TimeMode, 2, SetTimer2_cnt, buf);
-[e ( _DispTimeAdjustment (4 , , , _TimeMode -> -> 2 `i `uc _SetTimer2_cnt &U _buf ]
-"163
-[; ;main.c: 163:         LCD_Print(buf);
-[e ( _LCD_Print (1 -> &U _buf `*Cuc ]
-"165
-[; ;main.c: 165:         LCD_SetCursor(Cursor_pos, 0);
-[e ( _LCD_SetCursor (2 , _Cursor_pos -> -> 0 `i `uc ]
-"166
-[; ;main.c: 166:         LCD_Command(0x0E);
-[e ( _LCD_Command (1 -> -> 14 `i `uc ]
-"167
-[; ;main.c: 167:         break;
-[e $U 365  ]
-"169
-[; ;main.c: 169:       default:
-[e :U 370 ]
-"170
-[; ;main.c: 170:         break;
-[e $U 365  ]
-"171
-[; ;main.c: 171:       }
+[; ;main.c: 146:       }
 }
+[e :U 363 ]
+"147
+[; ;main.c: 147:       fT0_1second = 0;
+[e = _fT0_1second -> -> 0 `i `a ]
+"148
+[; ;main.c: 148:       fLCD_updata = 0;
+[e = _fLCD_updata -> -> 0 `i `a ]
+"154
+[; ;main.c: 154:       switch (LCD_DispMode) {
 [e $U 365  ]
+{
+"155
+[; ;main.c: 155:       case eNormal:
 [e :U 366 ]
-[e [\ _LCD_DispMode , $ . `E3170 0 367
- , $ . `E3170 1 368
- , $ . `E3170 2 369
- 370 ]
-[e :U 365 ]
+"156
+[; ;main.c: 156:         LCD_SetCursor(0, 0);
+[e ( _LCD_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+"157
+[; ;main.c: 157:         DispNormal(TimeMode, 1, SetTimer1_cnt, buf);
+[e ( _DispNormal (4 , , , _TimeMode -> -> 1 `i `uc _SetTimer1_cnt &U _buf ]
+"158
+[; ;main.c: 158:         LCD_Print(buf);
+[e ( _LCD_Print (1 -> &U _buf `*Cuc ]
+"160
+[; ;main.c: 160:         LCD_SetCursor(0, 1);
+[e ( _LCD_SetCursor (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
+"161
+[; ;main.c: 161:         DispNormal(TimeMode, 2, SetTimer2_cnt, buf);
+[e ( _DispNormal (4 , , , _TimeMode -> -> 2 `i `uc _SetTimer2_cnt &U _buf ]
+"162
+[; ;main.c: 162:         LCD_Print(buf);
+[e ( _LCD_Print (1 -> &U _buf `*Cuc ]
+"163
+[; ;main.c: 163:         LCD_SetCursor(14, 1);
+[e ( _LCD_SetCursor (2 , -> -> 14 `i `uc -> -> 1 `i `uc ]
+"164
+[; ;main.c: 164:         LCD_SetCursor(13, 0);
+[e ( _LCD_SetCursor (2 , -> -> 13 `i `uc -> -> 0 `i `uc ]
+"165
+[; ;main.c: 165:         break;
+[e $U 364  ]
+"167
+[; ;main.c: 167:       case eFunctionSet:
+[e :U 367 ]
+"168
+[; ;main.c: 168:         LCD_SetCursor(0, 0);
+[e ( _LCD_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+"169
+[; ;main.c: 169:         sprintf(buf, "FunctionSet Mode");
+[e ( _sprintf (1 , &U _buf :s 5C ]
+"170
+[; ;main.c: 170:         LCD_Print(buf);
+[e ( _LCD_Print (1 -> &U _buf `*Cuc ]
+"171
+[; ;main.c: 171:         LCD_SetCursor(0, 1);
+[e ( _LCD_SetCursor (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
 "172
-[; ;main.c: 172:     }
+[; ;main.c: 172:         DispFunctionSet(TimeMode, 2, SetTimer2_cnt, buf);
+[e ( _DispFunctionSet (4 , , , _TimeMode -> -> 2 `i `uc _SetTimer2_cnt &U _buf ]
+"173
+[; ;main.c: 173:         LCD_Print(buf);
+[e ( _LCD_Print (1 -> &U _buf `*Cuc ]
+"174
+[; ;main.c: 174:         LCD_SetCursor(13, 1);
+[e ( _LCD_SetCursor (2 , -> -> 13 `i `uc -> -> 1 `i `uc ]
+"175
+[; ;main.c: 175:         break;
+[e $U 364  ]
+"177
+[; ;main.c: 177:       case eTimeAdjustment:
+[e :U 368 ]
+"178
+[; ;main.c: 178:         LCD_SetCursor(0, 0);
+[e ( _LCD_SetCursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+"179
+[; ;main.c: 179:         DispTimeAdjustment(TimeMode, 1, SetTimer1_cnt, buf);
+[e ( _DispTimeAdjustment (4 , , , _TimeMode -> -> 1 `i `uc _SetTimer1_cnt &U _buf ]
+"180
+[; ;main.c: 180:         LCD_Print(buf);
+[e ( _LCD_Print (1 -> &U _buf `*Cuc ]
+"181
+[; ;main.c: 181:         LCD_SetCursor(0, 1);
+[e ( _LCD_SetCursor (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
+"182
+[; ;main.c: 182:         DispTimeAdjustment(TimeMode, 2, SetTimer2_cnt, buf);
+[e ( _DispTimeAdjustment (4 , , , _TimeMode -> -> 2 `i `uc _SetTimer2_cnt &U _buf ]
+"183
+[; ;main.c: 183:         LCD_Print(buf);
+[e ( _LCD_Print (1 -> &U _buf `*Cuc ]
+"185
+[; ;main.c: 185:         LCD_SetCursor(Cursor_pos, 0);
+[e ( _LCD_SetCursor (2 , _Cursor_pos -> -> 0 `i `uc ]
+"187
+[; ;main.c: 187:         break;
+[e $U 364  ]
+"189
+[; ;main.c: 189:       default:
+[e :U 369 ]
+"190
+[; ;main.c: 190:         break;
+[e $U 364  ]
+"191
+[; ;main.c: 191:       }
+}
+[e $U 364  ]
+[e :U 365 ]
+[e [\ _LCD_DispMode , $ . `E3170 0 366
+ , $ . `E3170 1 367
+ , $ . `E3170 2 368
+ 369 ]
+[e :U 364 ]
+"192
+[; ;main.c: 192:     }
 }
 [e :U 362 ]
-"174
-[; ;main.c: 174:     switch (LCD_DispMode) {
-[e $U 372  ]
+"194
+[; ;main.c: 194:     switch (LCD_DispMode) {
+[e $U 371  ]
 {
-"175
-[; ;main.c: 175:     case eNormal:
-[e :U 373 ]
-"176
-[; ;main.c: 176:       Normal();
-[e ( _Normal ..  ]
-"177
-[; ;main.c: 177:       break;
-[e $U 371  ]
-"178
-[; ;main.c: 178:     case eFunctionSet:
-[e :U 374 ]
-"179
-[; ;main.c: 179:       FunctionSet();
-[e ( _FunctionSet ..  ]
-"180
-[; ;main.c: 180:       break;
-[e $U 371  ]
-"181
-[; ;main.c: 181:     case eTimeAdjustment:
-[e :U 375 ]
-"182
-[; ;main.c: 182:       TimeAdjustment();
-[e ( _TimeAdjustment ..  ]
-"183
-[; ;main.c: 183:       break;
-[e $U 371  ]
-"184
-[; ;main.c: 184:     default:
-[e :U 376 ]
-"185
-[; ;main.c: 185:       break;
-[e $U 371  ]
-"186
-[; ;main.c: 186:     }
-}
-[e $U 371  ]
+"195
+[; ;main.c: 195:     case eNormal:
 [e :U 372 ]
-[e [\ _LCD_DispMode , $ . `E3170 0 373
- , $ . `E3170 1 374
- , $ . `E3170 2 375
- 376 ]
+"196
+[; ;main.c: 196:       Normal();
+[e ( _Normal ..  ]
+"197
+[; ;main.c: 197:       break;
+[e $U 370  ]
+"198
+[; ;main.c: 198:     case eFunctionSet:
+[e :U 373 ]
+"199
+[; ;main.c: 199:       FunctionSet();
+[e ( _FunctionSet ..  ]
+"200
+[; ;main.c: 200:       break;
+[e $U 370  ]
+"201
+[; ;main.c: 201:     case eTimeAdjustment:
+[e :U 374 ]
+"202
+[; ;main.c: 202:       TimeAdjustment();
+[e ( _TimeAdjustment ..  ]
+"203
+[; ;main.c: 203:       break;
+[e $U 370  ]
+"204
+[; ;main.c: 204:     default:
+[e :U 375 ]
+"205
+[; ;main.c: 205:       break;
+[e $U 370  ]
+"206
+[; ;main.c: 206:     }
+}
+[e $U 370  ]
 [e :U 371 ]
-"187
-[; ;main.c: 187:   }
+[e [\ _LCD_DispMode , $ . `E3170 0 372
+ , $ . `E3170 1 373
+ , $ . `E3170 2 374
+ 375 ]
+[e :U 370 ]
+"207
+[; ;main.c: 207:   }
 }
 [e :U 358 ]
 [e $U 359  ]
 [e :U 360 ]
-"188
-[; ;main.c: 188:   return 0;
+"208
+[; ;main.c: 208:   return 0;
 [e ) -> 0 `i ]
 [e $UE 357  ]
-"189
-[; ;main.c: 189: }
+"209
+[; ;main.c: 209: }
 [e :UE 357 ]
 }
 [p f _sprintf 8388608 ]
-[a 1C 70 117 110 99 116 105 111 110 83 101 116 32 77 111 100 101 0 ]
+[a 5C 70 117 110 99 116 105 111 110 83 101 116 32 77 111 100 101 0 ]
+[a 2C 76 97 109 112 32 116 101 115 116 32 116 111 111 108 46 32 0 ]
+[a 1C 87 101 108 99 111 109 101 32 116 111 32 76 70 65 46 32 0 ]
+[a 3C 69 100 105 116 58 69 69 32 89 105 109 105 110 103 32 32 0 ]
+[a 4C 86 101 114 115 105 111 110 58 32 48 46 54 48 32 32 32 0 ]

@@ -4924,7 +4924,7 @@ typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 149 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 2 3
 # 5 "./Key.h" 2
-# 22 "./Key.h"
+# 25 "./Key.h"
 typedef enum {
   KEY_IDLE = 0,
   KEY_DEBOUNCE,
@@ -4988,30 +4988,30 @@ void KEY_ScanAll(void) {
 
     switch (k->state) {
     case KEY_IDLE:
-      k->release_time_ms = 0;
+
       k->press_long_time_ms=0;
       k->press_time_ms = 0;
-      if (k->fKeyIn == 1) {
-        k->state = KEY_DEBOUNCE;
-      }
-      break;
 
-    case KEY_DEBOUNCE:
+
+
+
+
+
       if (k->fKeyIn == 1) {
-        k->press_time_ms += 10;
-        if (k->press_time_ms >= 10) {
+
+
 
           k->state = KEY_PRESSED;
         }
-      } else {
-        k->state = KEY_IDLE;
-      }
+
+
+
       break;
 
     case KEY_PRESSED:
       if (k->fKeyIn == 1) {
         k->press_time_ms += 10;
-        if (k->press_time_ms >= 400) {
+        if (k->press_time_ms >= 300) {
           k->fLong = 1;
           k->press_long_time_ms = 0;
           k->state = KEY_LONG;
@@ -5039,8 +5039,8 @@ void KEY_ScanAll(void) {
     case KEY_RELEASE:
       k->release_time_ms += 10;
       if (k->release_time_ms >= 10) {
-        if (k->press_time_ms >= 10 &&
-            k->press_time_ms < 400) {
+        if (k->press_time_ms >= 20 &&
+            k->press_time_ms < 300) {
               k->fShort = 1;
               k->state = KEY_SHORT;
             } else {

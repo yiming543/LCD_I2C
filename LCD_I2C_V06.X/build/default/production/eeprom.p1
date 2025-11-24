@@ -523,9 +523,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./RelayControl.h: 60: _Bool fDOT;
 [v _fDOT `a ~T0 @X0 1 e ]
 "6 eeprom.c
-[; ;eeprom.c: 6: __asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); __asm("\tdb\t" "0x01" "," "0x00" "," "0x01" "," "0x00" "," "0x23" "," "0x00" "," "0xff" "," "0xff");
+[; ;eeprom.c: 6: __asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); __asm("\tdb\t" "0x03" "," "0x00" "," "0x23" "," "0x00" "," "0x23" "," "0x00" "," "0xff" "," "0xff");
 [; <" 	psect eeprom_data,class=EEDATA,delta=2,space=3,noexec ;# ">
-[; <" 	db	0x01,0x00,0x01,0x00,0x23,0x00,0xff,0xff ;# ">
+[; <" 	db	0x03,0x00,0x23,0x00,0x23,0x00,0xff,0xff ;# ">
 "8
 [; ;eeprom.c: 8: __asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); __asm("\tdb\t" "0xff" "," "0xff" "," "0xff" "," "0xff" "," "0xff" "," "0xff" "," "0xff" "," "0xff");
 [; <" 	psect eeprom_data,class=EEDATA,delta=2,space=3,noexec ;# ">
