@@ -5398,12 +5398,12 @@ extern __attribute__((nonreentrant)) void _delay3(uint8_t);
 int main(void) {
 
   SYSTEM_Initialize();
+
   TMR0_SetInterruptHandler(TMR0_10msEven);
   TMR1_SetInterruptHandler(TMR1_10msEven);
 
 
   (INTCONbits.GIE = 1);
-
 
   (INTCONbits.PEIE = 1);
 

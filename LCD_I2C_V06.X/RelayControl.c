@@ -29,13 +29,12 @@ bool fLCD_updata = 0;
 bool fDOT = 0;
 
 void RelayControl_Init(void) {
-  // 開機預設模式為1秒
   RELAY_OFF;
   RelayState = OFF;
   TimerState = OFF;
-  strncpy(RelayState_buf, "OFF", sizeof(RelayState_buf));
-  // TimeMode = e1_000S;
-  // TimeMode = e0_100S;
+  // strncpy(RelayState_buf, "OFF", sizeof(RelayState_buf));
+
+  // 開機預設模式為0.01秒
   TimeMode = e0_010S;
   LCD_DispMode = eNormal;
   AdjustMode = eADJ_T1_DIG1;
@@ -115,9 +114,13 @@ void DispNormal(uint8_t mode, uint8_t n, uint16_t Num, char *buf) {
 
   // 第1行顯示OUT ON/OFF，第2行空白
   if (n == _T1_) {
-    strncpy(temp_str, RelayState_buf, sizeof(RelayState_buf));
+    if (TimerState)
+    strncpy(temp_str, " ON", 3);
+    else
+    strncpy(temp_str, "OFF", 3);
+
   } else {
-    strncpy(temp_str, "   ", sizeof(RelayState_buf));
+    strncpy(temp_str, "   ", 3);
     // if (RelayState) {
     //   temp_str[0] = 0x20; // space
     //   temp_str[1] = 0x2D; //-
@@ -182,13 +185,13 @@ void DispTimeAdjustment(uint8_t mode, uint8_t n, uint16_t Num, char *buf) {
   // 第1行顯示OUT ON/OFF，第2行空白
   if (n == _T1_) {
     // strncpy(temp_str, RelayState_buf, sizeof(RelayState_buf));
-    strncpy(temp_str, "   ", sizeof(RelayState_buf));
+    strncpy(temp_str, "   ", 3);
     digital[0] = SetTimer1_digi[0];
     digital[1] = SetTimer1_digi[1];
     digital[2] = SetTimer1_digi[2];
     digital[3] = SetTimer1_digi[3];
   } else {
-    strncpy(temp_str, "   ", sizeof(RelayState_buf));
+    strncpy(temp_str, "   ", 3);
     digital[0] = SetTimer2_digi[0];
     digital[1] = SetTimer2_digi[1];
     digital[2] = SetTimer2_digi[2];
@@ -254,10 +257,9 @@ void Normal(void) {
     fLCD_updata = 1;
     LCD_DispMode = eFunctionSet;
     OutState = OFF;
-    strncpy(RelayState_buf, "OFF", sizeof(RelayState_buf));
+    // strncpy(RelayState_buf, "OFF", sizeof(RelayState_buf));
     RELAY_OFF;
     short_led_Toggle();
-
   }
 
   // Relay ON/OFF
@@ -267,11 +269,11 @@ void Normal(void) {
     fLCD_updata = 1;
     if (OutState) {
       TimeModeSelect();
-      strncpy(RelayState_buf, " ON", sizeof(RelayState_buf));
+      // strncpy(RelayState_buf, " ON", sizeof(RelayState_buf));
       RELAY_ON;
     } else {
       RELAY_OFF;
-      strncpy(RelayState_buf, "OFF", sizeof(RelayState_buf));
+      // strncpy(RelayState_buf, "OFF", sizeof(RelayState_buf));
     }
   }
 }
@@ -373,9 +375,9 @@ void TimeAdjustment(void) {
     break;
   }
 
-  if (KEY_UP_S||KEY_UP_L_100sm) {
+  if (KEY_UP_S || KEY_UP_L_100sm) {
     KEY_UP_S = 0;
-    KEY_UP_L_100sm=0;
+    KEY_UP_L_100sm = 0;
     fLCD_updata = 1;
     (*DigPtr)++;
     if (*DigPtr > MAX_NUM)
@@ -392,9 +394,9 @@ void TimeAdjustment(void) {
     short_led_Toggle();
   }
 
-  if (KEY_DOWN_S||KEY_DOWN_L_100ms) {
+  if (KEY_DOWN_S || KEY_DOWN_L_100ms) {
     KEY_DOWN_S = 0;
-    KEY_DOWN_L_100ms=0;
+    KEY_DOWN_L_100ms = 0;
     fLCD_updata = 1;
     if (*DigPtr == MIN_NUM)
       *DigPtr = 9;

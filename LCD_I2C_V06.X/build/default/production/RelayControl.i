@@ -5447,11 +5447,10 @@ _Bool fLCD_updata = 0;
 _Bool fDOT = 0;
 
 void RelayControl_Init(void) {
-
   LATCbits.LATC2 = 0;;
   RelayState = 0;
   TimerState = 0;
-  strncpy(RelayState_buf, "OFF", sizeof(RelayState_buf));
+
 
 
   TimeMode = e0_010S;
@@ -5533,10 +5532,14 @@ void DispNormal(uint8_t mode, uint8_t n, uint16_t Num, char *buf) {
 
 
   if (n == 1) {
-    strncpy(temp_str, RelayState_buf, sizeof(RelayState_buf));
+    if (TimerState)
+    strncpy(temp_str, " ON", 3);
+    else
+    strncpy(temp_str, "OFF", 3);
+
   } else {
-    strncpy(temp_str, "   ", sizeof(RelayState_buf));
-# 134 "RelayControl.c"
+    strncpy(temp_str, "   ", 3);
+# 137 "RelayControl.c"
   }
 
   switch (mode) {
@@ -5588,13 +5591,13 @@ void DispTimeAdjustment(uint8_t mode, uint8_t n, uint16_t Num, char *buf) {
 
   if (n == 1) {
 
-    strncpy(temp_str, "   ", sizeof(RelayState_buf));
+    strncpy(temp_str, "   ", 3);
     digital[0] = SetTimer1_digi[0];
     digital[1] = SetTimer1_digi[1];
     digital[2] = SetTimer1_digi[2];
     digital[3] = SetTimer1_digi[3];
   } else {
-    strncpy(temp_str, "   ", sizeof(RelayState_buf));
+    strncpy(temp_str, "   ", 3);
     digital[0] = SetTimer2_digi[0];
     digital[1] = SetTimer2_digi[1];
     digital[2] = SetTimer2_digi[2];
@@ -5660,10 +5663,9 @@ void Normal(void) {
     fLCD_updata = 1;
     LCD_DispMode = eFunctionSet;
     OutState = 0;
-    strncpy(RelayState_buf, "OFF", sizeof(RelayState_buf));
+
     LATCbits.LATC2 = 0;;
     do { LATCbits.LATC0 = ~LATCbits.LATC0; } while(0);
-
   }
 
 
@@ -5673,11 +5675,11 @@ void Normal(void) {
     fLCD_updata = 1;
     if (OutState) {
       TimeModeSelect();
-      strncpy(RelayState_buf, " ON", sizeof(RelayState_buf));
+
       LATCbits.LATC2 = 1;;
     } else {
       LATCbits.LATC2 = 0;;
-      strncpy(RelayState_buf, "OFF", sizeof(RelayState_buf));
+
     }
   }
 }
@@ -5779,9 +5781,9 @@ void TimeAdjustment(void) {
     break;
   }
 
-  if (key[0].fShort||key[0].fLong_100ms) {
+  if (key[0].fShort || key[0].fLong_100ms) {
     key[0].fShort = 0;
-    key[0].fLong_100ms=0;
+    key[0].fLong_100ms = 0;
     fLCD_updata = 1;
     (*DigPtr)++;
     if (*DigPtr > 9)
@@ -5798,9 +5800,9 @@ void TimeAdjustment(void) {
     do { LATCbits.LATC0 = ~LATCbits.LATC0; } while(0);
   }
 
-  if (key[2].fShort||key[2].fLong_100ms) {
+  if (key[2].fShort || key[2].fLong_100ms) {
     key[2].fShort = 0;
-    key[2].fLong_100ms=0;
+    key[2].fLong_100ms = 0;
     fLCD_updata = 1;
     if (*DigPtr == 0)
       *DigPtr = 9;

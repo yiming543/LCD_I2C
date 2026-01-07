@@ -1,0 +1,4 @@
+D:/yiming/00work/LCD_I2C/LCD_I2C_V07.X/_build/LCD_I2C/default/CMakeFiles/LCD_I2C_default_default_XC8_compile.dir
+D:/yiming/00work/LCD_I2C/LCD_I2C_V07.X/_build/LCD_I2C/default/CMakeFiles/LCD_I2C_default_image_mZZ75Hmf.dir
+D:/yiming/00work/LCD_I2C/LCD_I2C_V07.X/_build/LCD_I2C/default/CMakeFiles/edit_cache.dir
+D:/yiming/00work/LCD_I2C/LCD_I2C_V07.X/_build/LCD_I2C/default/CMakeFiles/rebuild_cache.dir

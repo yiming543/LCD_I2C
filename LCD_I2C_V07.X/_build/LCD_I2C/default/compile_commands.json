@@ -1,0 +1,92 @@
+[
+{
+  "directory": "D:/yiming/00work/LCD_I2C/LCD_I2C_V07.X/_build/LCD_I2C/default",
+  "command": "c:\\PROGRA~1\\MICROC~1\\xc8\\v2.46\\bin\\xc8-cc.exe -DXPRJ_default=default -D__16F1936__ -D__DEBUG=1 -ID:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\cmake\\LCD_I2C\\default\\..\\..\\.. -c -mcpu=16F1936 -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -mwarn=-3 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto -o CMakeFiles\\LCD_I2C_default_default_XC8_compile.dir\\D_\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\Key.c.p1 -c D:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\Key.c",
+  "file": "D:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\Key.c",
+  "output": "CMakeFiles\\LCD_I2C_default_default_XC8_compile.dir\\D_\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\Key.c.p1"
+},
+{
+  "directory": "D:/yiming/00work/LCD_I2C/LCD_I2C_V07.X/_build/LCD_I2C/default",
+  "command": "c:\\PROGRA~1\\MICROC~1\\xc8\\v2.46\\bin\\xc8-cc.exe -DXPRJ_default=default -D__16F1936__ -D__DEBUG=1 -ID:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\cmake\\LCD_I2C\\default\\..\\..\\.. -c -mcpu=16F1936 -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -mwarn=-3 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto -o CMakeFiles\\LCD_I2C_default_default_XC8_compile.dir\\D_\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\LCD.c.p1 -c D:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\LCD.c",
+  "file": "D:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\LCD.c",
+  "output": "CMakeFiles\\LCD_I2C_default_default_XC8_compile.dir\\D_\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\LCD.c.p1"
+},
+{
+  "directory": "D:/yiming/00work/LCD_I2C/LCD_I2C_V07.X/_build/LCD_I2C/default",
+  "command": "c:\\PROGRA~1\\MICROC~1\\xc8\\v2.46\\bin\\xc8-cc.exe -DXPRJ_default=default -D__16F1936__ -D__DEBUG=1 -ID:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\cmake\\LCD_I2C\\default\\..\\..\\.. -c -mcpu=16F1936 -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -mwarn=-3 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto -o CMakeFiles\\LCD_I2C_default_default_XC8_compile.dir\\D_\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\RelayControl.c.p1 -c D:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\RelayControl.c",
+  "file": "D:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\RelayControl.c",
+  "output": "CMakeFiles\\LCD_I2C_default_default_XC8_compile.dir\\D_\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\RelayControl.c.p1"
+},
+{
+  "directory": "D:/yiming/00work/LCD_I2C/LCD_I2C_V07.X/_build/LCD_I2C/default",
+  "command": "c:\\PROGRA~1\\MICROC~1\\xc8\\v2.46\\bin\\xc8-cc.exe -DXPRJ_default=default -D__16F1936__ -D__DEBUG=1 -ID:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\cmake\\LCD_I2C\\default\\..\\..\\.. -c -mcpu=16F1936 -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -mwarn=-3 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto -o CMakeFiles\\LCD_I2C_default_default_XC8_compile.dir\\D_\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\TimerEven.c.p1 -c D:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\TimerEven.c",
+  "file": "D:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\TimerEven.c",
+  "output": "CMakeFiles\\LCD_I2C_default_default_XC8_compile.dir\\D_\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\TimerEven.c.p1"
+},
+{
+  "directory": "D:/yiming/00work/LCD_I2C/LCD_I2C_V07.X/_build/LCD_I2C/default",
+  "command": "c:\\PROGRA~1\\MICROC~1\\xc8\\v2.46\\bin\\xc8-cc.exe -DXPRJ_default=default -D__16F1936__ -D__DEBUG=1 -ID:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\cmake\\LCD_I2C\\default\\..\\..\\.. -c -mcpu=16F1936 -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -mwarn=-3 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto -o CMakeFiles\\LCD_I2C_default_default_XC8_compile.dir\\D_\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\eeprom.c.p1 -c D:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\eeprom.c",
+  "file": "D:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\eeprom.c",
+  "output": "CMakeFiles\\LCD_I2C_default_default_XC8_compile.dir\\D_\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\eeprom.c.p1"
+},
+{
+  "directory": "D:/yiming/00work/LCD_I2C/LCD_I2C_V07.X/_build/LCD_I2C/default",
+  "command": "c:\\PROGRA~1\\MICROC~1\\xc8\\v2.46\\bin\\xc8-cc.exe -DXPRJ_default=default -D__16F1936__ -D__DEBUG=1 -ID:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\cmake\\LCD_I2C\\default\\..\\..\\.. -c -mcpu=16F1936 -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -mwarn=-3 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto -o CMakeFiles\\LCD_I2C_default_default_XC8_compile.dir\\D_\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\hd44780_i2c.c.p1 -c D:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\hd44780_i2c.c",
+  "file": "D:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\hd44780_i2c.c",
+  "output": "CMakeFiles\\LCD_I2C_default_default_XC8_compile.dir\\D_\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\hd44780_i2c.c.p1"
+},
+{
+  "directory": "D:/yiming/00work/LCD_I2C/LCD_I2C_V07.X/_build/LCD_I2C/default",
+  "command": "c:\\PROGRA~1\\MICROC~1\\xc8\\v2.46\\bin\\xc8-cc.exe -DXPRJ_default=default -D__16F1936__ -D__DEBUG=1 -ID:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\cmake\\LCD_I2C\\default\\..\\..\\.. -c -mcpu=16F1936 -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -mwarn=-3 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto -o CMakeFiles\\LCD_I2C_default_default_XC8_compile.dir\\D_\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\main.c.p1 -c D:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\main.c",
+  "file": "D:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\main.c",
+  "output": "CMakeFiles\\LCD_I2C_default_default_XC8_compile.dir\\D_\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\main.c.p1"
+},
+{
+  "directory": "D:/yiming/00work/LCD_I2C/LCD_I2C_V07.X/_build/LCD_I2C/default",
+  "command": "c:\\PROGRA~1\\MICROC~1\\xc8\\v2.46\\bin\\xc8-cc.exe -DXPRJ_default=default -D__16F1936__ -D__DEBUG=1 -ID:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\cmake\\LCD_I2C\\default\\..\\..\\.. -c -mcpu=16F1936 -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -mwarn=-3 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto -o CMakeFiles\\LCD_I2C_default_default_XC8_compile.dir\\D_\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\device_config.c.p1 -c D:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\device_config.c",
+  "file": "D:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\device_config.c",
+  "output": "CMakeFiles\\LCD_I2C_default_default_XC8_compile.dir\\D_\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\device_config.c.p1"
+},
+{
+  "directory": "D:/yiming/00work/LCD_I2C/LCD_I2C_V07.X/_build/LCD_I2C/default",
+  "command": "c:\\PROGRA~1\\MICROC~1\\xc8\\v2.46\\bin\\xc8-cc.exe -DXPRJ_default=default -D__16F1936__ -D__DEBUG=1 -ID:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\cmake\\LCD_I2C\\default\\..\\..\\.. -c -mcpu=16F1936 -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -mwarn=-3 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto -o CMakeFiles\\LCD_I2C_default_default_XC8_compile.dir\\D_\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\examples\\i2c_master_example.c.p1 -c D:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\examples\\i2c_master_example.c",
+  "file": "D:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\examples\\i2c_master_example.c",
+  "output": "CMakeFiles\\LCD_I2C_default_default_XC8_compile.dir\\D_\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\examples\\i2c_master_example.c.p1"
+},
+{
+  "directory": "D:/yiming/00work/LCD_I2C/LCD_I2C_V07.X/_build/LCD_I2C/default",
+  "command": "c:\\PROGRA~1\\MICROC~1\\xc8\\v2.46\\bin\\xc8-cc.exe -DXPRJ_default=default -D__16F1936__ -D__DEBUG=1 -ID:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\cmake\\LCD_I2C\\default\\..\\..\\.. -c -mcpu=16F1936 -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -mwarn=-3 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto -o CMakeFiles\\LCD_I2C_default_default_XC8_compile.dir\\D_\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\i2c_master.c.p1 -c D:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\i2c_master.c",
+  "file": "D:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\i2c_master.c",
+  "output": "CMakeFiles\\LCD_I2C_default_default_XC8_compile.dir\\D_\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\i2c_master.c.p1"
+},
+{
+  "directory": "D:/yiming/00work/LCD_I2C/LCD_I2C_V07.X/_build/LCD_I2C/default",
+  "command": "c:\\PROGRA~1\\MICROC~1\\xc8\\v2.46\\bin\\xc8-cc.exe -DXPRJ_default=default -D__16F1936__ -D__DEBUG=1 -ID:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\cmake\\LCD_I2C\\default\\..\\..\\.. -c -mcpu=16F1936 -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -mwarn=-3 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto -o CMakeFiles\\LCD_I2C_default_default_XC8_compile.dir\\D_\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\interrupt_manager.c.p1 -c D:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\interrupt_manager.c",
+  "file": "D:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\interrupt_manager.c",
+  "output": "CMakeFiles\\LCD_I2C_default_default_XC8_compile.dir\\D_\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\interrupt_manager.c.p1"
+},
+{
+  "directory": "D:/yiming/00work/LCD_I2C/LCD_I2C_V07.X/_build/LCD_I2C/default",
+  "command": "c:\\PROGRA~1\\MICROC~1\\xc8\\v2.46\\bin\\xc8-cc.exe -DXPRJ_default=default -D__16F1936__ -D__DEBUG=1 -ID:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\cmake\\LCD_I2C\\default\\..\\..\\.. -c -mcpu=16F1936 -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -mwarn=-3 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto -o CMakeFiles\\LCD_I2C_default_default_XC8_compile.dir\\D_\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\mcc.c.p1 -c D:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\mcc.c",
+  "file": "D:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\mcc.c",
+  "output": "CMakeFiles\\LCD_I2C_default_default_XC8_compile.dir\\D_\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\mcc.c.p1"
+},
+{
+  "directory": "D:/yiming/00work/LCD_I2C/LCD_I2C_V07.X/_build/LCD_I2C/default",
+  "command": "c:\\PROGRA~1\\MICROC~1\\xc8\\v2.46\\bin\\xc8-cc.exe -DXPRJ_default=default -D__16F1936__ -D__DEBUG=1 -ID:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\cmake\\LCD_I2C\\default\\..\\..\\.. -c -mcpu=16F1936 -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -mwarn=-3 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto -o CMakeFiles\\LCD_I2C_default_default_XC8_compile.dir\\D_\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\pin_manager.c.p1 -c D:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\pin_manager.c",
+  "file": "D:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\pin_manager.c",
+  "output": "CMakeFiles\\LCD_I2C_default_default_XC8_compile.dir\\D_\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\pin_manager.c.p1"
+},
+{
+  "directory": "D:/yiming/00work/LCD_I2C/LCD_I2C_V07.X/_build/LCD_I2C/default",
+  "command": "c:\\PROGRA~1\\MICROC~1\\xc8\\v2.46\\bin\\xc8-cc.exe -DXPRJ_default=default -D__16F1936__ -D__DEBUG=1 -ID:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\cmake\\LCD_I2C\\default\\..\\..\\.. -c -mcpu=16F1936 -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -mwarn=-3 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto -o CMakeFiles\\LCD_I2C_default_default_XC8_compile.dir\\D_\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\tmr0.c.p1 -c D:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\tmr0.c",
+  "file": "D:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\tmr0.c",
+  "output": "CMakeFiles\\LCD_I2C_default_default_XC8_compile.dir\\D_\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\tmr0.c.p1"
+},
+{
+  "directory": "D:/yiming/00work/LCD_I2C/LCD_I2C_V07.X/_build/LCD_I2C/default",
+  "command": "c:\\PROGRA~1\\MICROC~1\\xc8\\v2.46\\bin\\xc8-cc.exe -DXPRJ_default=default -D__16F1936__ -D__DEBUG=1 -ID:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\cmake\\LCD_I2C\\default\\..\\..\\.. -c -mcpu=16F1936 -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -mwarn=-3 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto -o CMakeFiles\\LCD_I2C_default_default_XC8_compile.dir\\D_\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\tmr1.c.p1 -c D:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\tmr1.c",
+  "file": "D:\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\tmr1.c",
+  "output": "CMakeFiles\\LCD_I2C_default_default_XC8_compile.dir\\D_\\yiming\\00work\\LCD_I2C\\LCD_I2C_V07.X\\mcc_generated_files\\tmr1.c.p1"
+}
+]

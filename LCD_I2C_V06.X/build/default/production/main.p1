@@ -642,14 +642,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "96
 [; ;main.c: 96:   SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"97
-[; ;main.c: 97:   TMR0_SetInterruptHandler(TMR0_10msEven);
-[e ( _TMR0_SetInterruptHandler (1 &U _TMR0_10msEven ]
 "98
-[; ;main.c: 98:   TMR1_SetInterruptHandler(TMR1_10msEven);
+[; ;main.c: 98:   TMR0_SetInterruptHandler(TMR0_10msEven);
+[e ( _TMR0_SetInterruptHandler (1 &U _TMR0_10msEven ]
+"99
+[; ;main.c: 99:   TMR1_SetInterruptHandler(TMR1_10msEven);
 [e ( _TMR1_SetInterruptHandler (1 &U _TMR1_10msEven ]
-"101
-[; ;main.c: 101:   (INTCONbits.GIE = 1);
+"102
+[; ;main.c: 102:   (INTCONbits.GIE = 1);
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
 "104
 [; ;main.c: 104:   (INTCONbits.PEIE = 1);

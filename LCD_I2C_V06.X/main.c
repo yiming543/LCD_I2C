@@ -94,18 +94,18 @@
 int main(void) {
   // initialize the device
   SYSTEM_Initialize();
+  //Modify the definition name of the interrupt handler
   TMR0_SetInterruptHandler(TMR0_10msEven);
   TMR1_SetInterruptHandler(TMR1_10msEven);
 
   // Enable the Global Interrupts
   INTERRUPT_GlobalInterruptEnable();
-
   // Enable the Peripheral Interrupts
   INTERRUPT_PeripheralInterruptEnable();
 
   RelayControl_Init();
   POWER_ON_EEPROM_READ();
-  KEY_Init(); // ===== 加入此行初始化按鍵模組 =====
+  KEY_Init(); 
   LCD_Init();
 
   // 開機LCD顯示

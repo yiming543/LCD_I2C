@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/default/production\LCD_I2C_V07.X.production.hex">
+    <memory name="program">
+      <units>words</units>
+      <length>8192</length>
+      <used>4383</used>
+      <free>3809</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>512</length>
+      <used>281</used>
+      <free>231</free>
+    </memory>
+  </executable>
+</project>

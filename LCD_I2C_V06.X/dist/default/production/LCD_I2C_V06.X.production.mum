@@ -1,6 +1,6 @@
 
 Memory Summary:
-    Program space        used  1369h (  4969) of  2000h words   ( 60.7%)
+    Program space        used  134Ch (  4940) of  2000h words   ( 60.3%)
     Data space           used   12Ch (   300) of   200h bytes   ( 58.6%)
     EEPROM space         used    10h (    16) of   100h bytes   (  6.2%)
     Configuration bits   used     2h (     2) of     2h words   (100.0%)

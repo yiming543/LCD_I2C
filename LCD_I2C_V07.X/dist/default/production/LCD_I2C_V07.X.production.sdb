@@ -1,0 +1,1352 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1936 ]
+[d frameptr 6 ]
+"93 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\mcc_generated_files/examples/i2c_master_example.c
+[e E358 . `uc
+I2C_NOERR 0
+I2C_BUSY 1
+I2C_FAIL 2
+]
+"94
+[e E363 . `uc
+I2C_STOP 1
+I2C_RESTART_READ 2
+I2C_RESTART_WRITE 3
+I2C_CONTINUE 4
+I2C_RESET_LINK 5
+]
+"147 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\mcc_generated_files/i2c_master.c
+[e E3110 . `uc
+I2C_IDLE 0
+I2C_SEND_ADR_READ 1
+I2C_SEND_ADR_WRITE 2
+I2C_TX 3
+I2C_RX 4
+I2C_RCEN 5
+I2C_TX_EMPTY 6
+I2C_SEND_RESTART_READ 7
+I2C_SEND_RESTART_WRITE 8
+I2C_SEND_RESTART 9
+I2C_SEND_STOP 10
+I2C_RX_ACK 11
+I2C_RX_NACK_STOP 12
+I2C_RX_NACK_RESTART 13
+I2C_RESET 14
+I2C_ADDRESS_NACK 15
+]
+"166
+[e E363 . `uc
+I2C_STOP 1
+I2C_RESTART_READ 2
+I2C_RESTART_WRITE 3
+I2C_CONTINUE 4
+I2C_RESET_LINK 5
+]
+[e E358 . `uc
+I2C_NOERR 0
+I2C_BUSY 1
+I2C_FAIL 2
+]
+"190
+[e E3128 . `uc
+I2C_DATA_COMPLETE 0
+I2C_WRITE_COLLISION 1
+I2C_ADDR_NACK 2
+I2C_DATA_NACK 3
+I2C_TIMEOUT 4
+I2C_NULL 5
+]
+"141 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\main.c
+[e E3226 DISP_MODE `uc
+eNormal 0
+eTimeSetting1 1
+eTimeSetting2 2
+eTimerCount 3
+]
+"11 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\Key.c
+[e E2730 . `uc
+KEY_IDLE 0
+KEY_DEBOUNCE 1
+KEY_PRESSED 2
+KEY_SHORT 3
+KEY_LONG 4
+KEY_RELEASE 5
+]
+"27 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\RelayControl.c
+[e E3190 DISP_MODE `uc
+eNormal 0
+eTimeSetting1 1
+eTimeSetting2 2
+eTimerCount 3
+]
+"133
+[e E3250 . `uc
+KEY_IDLE 0
+KEY_DEBOUNCE 1
+KEY_PRESSED 2
+KEY_SHORT 3
+KEY_LONG 4
+KEY_RELEASE 5
+]
+"113 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\LCD.c
+[e E3183 DISP_MODE `uc
+eNormal 0
+eTimeSetting1 1
+eTimeSetting2 2
+eTimerCount 3
+]
+"1 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"193 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\doprnt.c
+[v _pad pad `(v  1 s 1 pad ]
+"513
+[v _dtoa dtoa `(v  1 s 1 dtoa ]
+"942
+[v _stoa stoa `(v  1 s 1 stoa ]
+"1158
+[v _read_prec_or_width read_prec_or_width `(i  1 s 2 read_prec_or_width ]
+"1177
+[v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
+"1817
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+"9 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\nf_sprintf.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\putch.c
+[v _putch putch `(v  1 e 1 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"3 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strncpy.c
+[v _strncpy strncpy `(*.5uc  1 e 2 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\pic\__eeread.c
+[v _eeprom_read eeprom_read `(uc  1 e 1 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\pic\__eewrite.c
+[v _eeprom_write eeprom_write `(v  1 e 1 0 ]
+"13 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\eeprom.c
+[v _POWER_ON_EEPROM_READ POWER_ON_EEPROM_READ `(v  1 e 1 0 ]
+"20
+[v _EEPROM_WriteWord EEPROM_WriteWord `(v  1 e 1 0 ]
+"30
+[v _EEPROM_ReadWord EEPROM_ReadWord `(us  1 e 2 0 ]
+"148 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\hd44780_i2c.c
+[v _PCF8574_LCD_SendNibble PCF8574_LCD_SendNibble `(v  1 e 1 0 ]
+"163
+[v _LCD_Command LCD_Command `(v  1 e 1 0 ]
+"170
+[v _LCD_Data LCD_Data `(v  1 e 1 0 ]
+"179
+[v _LCD_SetCursor LCD_SetCursor `(v  1 e 1 0 ]
+"184
+[v _LCD_Print LCD_Print `(v  1 e 1 0 ]
+"17 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\Key.c
+[v _KEY_Init KEY_Init `(v  1 e 1 0 ]
+"30
+[v _KEY_ScanAll KEY_ScanAll `(v  1 e 1 0 ]
+"109
+[v _CheckKey CheckKey `(v  1 e 1 0 ]
+"18 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\LCD.c
+[v _LCD_Init LCD_Init `(v  1 e 1 0 ]
+"40
+[v _PWR_ON_DISP PWR_ON_DISP `(v  1 e 1 0 ]
+"63
+[v _DISP_SHOW DISP_SHOW `(v  1 e 1 0 ]
+"100 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\main.c
+[v _main main `(i  1 e 2 0 ]
+"91 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\mcc_generated_files/examples/i2c_master_example.c
+[v _I2C_Write1ByteRegister I2C_Write1ByteRegister `(v  1 e 1 0 ]
+"158
+[v _wr1RegCompleteHandler wr1RegCompleteHandler `(E363  1 s 1 wr1RegCompleteHandler ]
+"168 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\mcc_generated_files/i2c_master.c
+[v _I2C_Initialize I2C_Initialize `(v  1 e 1 0 ]
+"176
+[v _I2C_Open I2C_Open `(E358  1 e 1 0 ]
+"218
+[v _I2C_Close I2C_Close `(E358  1 e 1 0 ]
+"231
+[v _I2C_MasterOperation I2C_MasterOperation `(E358  1 e 1 0 ]
+"262
+[v _I2C_SetBuffer I2C_SetBuffer `(v  1 e 1 0 ]
+"270
+[v _I2C_SetDataCompleteCallback I2C_SetDataCompleteCallback `(v  1 e 1 0 ]
+"293
+[v _I2C_SetCallback I2C_SetCallback `(v  1 s 1 I2C_SetCallback ]
+"304
+[v _I2C_Poller I2C_Poller `(v  1 s 1 I2C_Poller ]
+"311
+[v _I2C_MasterFsm I2C_MasterFsm `T(v  1 s 1 I2C_MasterFsm ]
+"320
+[v _I2C_DO_IDLE I2C_DO_IDLE `(E3110  1 s 1 I2C_DO_IDLE ]
+"326
+[v _I2C_DO_SEND_ADR_READ I2C_DO_SEND_ADR_READ `(E3110  1 s 1 I2C_DO_SEND_ADR_READ ]
+"332
+[v _I2C_DO_SEND_ADR_WRITE I2C_DO_SEND_ADR_WRITE `(E3110  1 s 1 I2C_DO_SEND_ADR_WRITE ]
+"338
+[v _I2C_DO_TX I2C_DO_TX `(E3110  1 s 1 I2C_DO_TX ]
+"358
+[v _I2C_DO_RX I2C_DO_RX `(E3110  1 s 1 I2C_DO_RX ]
+"378
+[v _I2C_DO_RCEN I2C_DO_RCEN `(E3110  1 s 1 I2C_DO_RCEN ]
+"384
+[v _I2C_DO_TX_EMPTY I2C_DO_TX_EMPTY `(E3110  1 s 1 I2C_DO_TX_EMPTY ]
+"424
+[v _I2C_DO_SEND_RESTART_READ I2C_DO_SEND_RESTART_READ `(E3110  1 s 1 I2C_DO_SEND_RESTART_READ ]
+"429
+[v _I2C_DO_SEND_RESTART_WRITE I2C_DO_SEND_RESTART_WRITE `(E3110  1 s 1 I2C_DO_SEND_RESTART_WRITE ]
+"434
+[v _I2C_DO_SEND_RESTART I2C_DO_SEND_RESTART `(E3110  1 s 1 I2C_DO_SEND_RESTART ]
+"439
+[v _I2C_DO_SEND_STOP I2C_DO_SEND_STOP `(E3110  1 s 1 I2C_DO_SEND_STOP ]
+"444
+[v _I2C_DO_RX_ACK I2C_DO_RX_ACK `(E3110  1 s 1 I2C_DO_RX_ACK ]
+"449
+[v _I2C_DO_RX_NACK_STOP I2C_DO_RX_NACK_STOP `(E3110  1 s 1 I2C_DO_RX_NACK_STOP ]
+"454
+[v _I2C_DO_RX_NACK_RESTART I2C_DO_RX_NACK_RESTART `(E3110  1 s 1 I2C_DO_RX_NACK_RESTART ]
+"459
+[v _I2C_DO_RESET I2C_DO_RESET `(E3110  1 s 1 I2C_DO_RESET ]
+"464
+[v _I2C_DO_ADDRESS_NACK I2C_DO_ADDRESS_NACK `(E3110  1 s 1 I2C_DO_ADDRESS_NACK ]
+"483
+[v _I2C_CallbackReturnStop I2C_CallbackReturnStop `(E363  1 e 1 0 ]
+"485
+[v _I2C_CallbackReturnReset I2C_CallbackReturnReset `(E363  1 e 1 0 ]
+"512
+[v _I2C_MasterClose I2C_MasterClose `T(v  1 s 1 I2C_MasterClose ]
+"517
+[v _I2C_MasterGetRxData I2C_MasterGetRxData `T(uc  1 s 1 I2C_MasterGetRxData ]
+"519
+[v _I2C_MasterSendTxData I2C_MasterSendTxData `T(v  1 s 1 I2C_MasterSendTxData ]
+"521
+[v _I2C_MasterEnableRestart I2C_MasterEnableRestart `T(v  1 s 1 I2C_MasterEnableRestart ]
+"528
+[v _I2C_MasterStartRx I2C_MasterStartRx `T(v  1 s 1 I2C_MasterStartRx ]
+"530
+[v _I2C_MasterStart I2C_MasterStart `T(v  1 s 1 I2C_MasterStart ]
+"532
+[v _I2C_MasterStop I2C_MasterStop `T(v  1 s 1 I2C_MasterStop ]
+"534
+[v _I2C_MasterIsNack I2C_MasterIsNack `T(a  1 s 1 I2C_MasterIsNack ]
+"536
+[v _I2C_MasterSendAck I2C_MasterSendAck `T(v  1 s 1 I2C_MasterSendAck ]
+"541
+[v _I2C_MasterSendNack I2C_MasterSendNack `T(v  1 s 1 I2C_MasterSendNack ]
+"566
+[v _I2C_MasterDisableIrq I2C_MasterDisableIrq `T(v  1 s 1 I2C_MasterDisableIrq ]
+"568
+[v _I2C_MasterClearIrq I2C_MasterClearIrq `T(v  1 s 1 I2C_MasterClearIrq ]
+"570
+[v _I2C_MasterSetIrq I2C_MasterSetIrq `T(v  1 s 1 I2C_MasterSetIrq ]
+"572
+[v _I2C_MasterWaitForEvent I2C_MasterWaitForEvent `T(v  1 s 1 I2C_MasterWaitForEvent ]
+"52 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+"48 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"58
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"70
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+"55 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"64 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+"108
+[v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
+"130
+[v _TMR0_CallBack TMR0_CallBack `(v  1 e 1 0 ]
+"140
+[v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
+"64 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\mcc_generated_files/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+"120
+[v _TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
+"157
+[v _TMR1_ISR TMR1_ISR `(v  1 e 1 0 ]
+"171
+[v _TMR1_SetInterruptHandler TMR1_SetInterruptHandler `(v  1 e 1 0 ]
+"24 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\RelayControl.c
+[v _RelayControl_Init RelayControl_Init `(v  1 e 1 0 ]
+"31
+[v _TimeRestart TimeRestart `(v  1 e 1 0 ]
+"66
+[v _DispNormal DispNormal `(v  1 e 1 0 ]
+"87
+[v _KeepTimerCounter KeepTimerCounter `(v  1 e 1 0 ]
+"127
+[v _Normal Normal `(v  1 e 1 0 ]
+"175
+[v _TimerCount TimerCount `(v  1 e 1 0 ]
+"199
+[v _TimeSetting1 TimeSetting1 `(v  1 e 1 0 ]
+"265
+[v _TimeSetting2 TimeSetting2 `(v  1 e 1 0 ]
+"329
+[v _GetTimerN_Value GetTimerN_Value `(us  1 e 2 0 ]
+"339
+[v _SetTimerN_Value SetTimerN_Value `(v  1 e 1 0 ]
+"18 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\TimerEven.c
+[v _TMR0_10msEven TMR0_10msEven `(v  1 e 1 0 ]
+"21
+[v _TMR1_10msEven TMR1_10msEven `(v  1 e 1 0 ]
+"48 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X/RelayControl.h
+[v _fLCD_updata fLCD_updata `a  1 e 1 0 ]
+[s S1285 . 1 `uc 1 C 1 0 :1:0 
+`uc 1 DC 1 0 :1:1 
+`uc 1 Z 1 0 :1:2 
+`uc 1 nPD 1 0 :1:3 
+`uc 1 nTO 1 0 :1:4 
+]
+"131 C:/Users/t00904/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1936.h
+[s S1291 . 1 `uc 1 CARRY 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ZERO 1 0 :1:2 
+]
+[u S1295 . 1 `S1285 1 . 1 0 `S1291 1 . 1 0 ]
+[v _STATUSbits STATUSbits `VES1295  1 e 1 @3 ]
+[s S741 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"374
+[s S750 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S755 . 1 `S741 1 . 1 0 `S750 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES755  1 e 1 @11 ]
+[s S1010 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"508
+[u S1019 . 1 `S1010 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES1019  1 e 1 @13 ]
+[s S229 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"653
+[u S238 . 1 `S229 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES238  1 e 1 @17 ]
+"801
+[v _TMR0 TMR0 `VEuc  1 e 1 @21 ]
+"828
+[v _TMR1L TMR1L `VEuc  1 e 1 @22 ]
+"848
+[v _TMR1H TMR1H `VEuc  1 e 1 @23 ]
+"868
+[v _T1CON T1CON `VEuc  1 e 1 @24 ]
+[s S643 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 nT1SYNC 1 0 :1:2 
+`uc 1 T1OSCEN 1 0 :1:3 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+`uc 1 TMR1CS0 1 0 :1:6 
+`uc 1 TMR1CS1 1 0 :1:7 
+]
+"890
+[s S652 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 T1CKPS 1 0 :2:4 
+`uc 1 TMR1CS 1 0 :2:6 
+]
+[u S656 . 1 `S643 1 . 1 0 `S652 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES656  1 e 1 @24 ]
+"940
+[v _T1GCON T1GCON `VEuc  1 e 1 @25 ]
+[s S673 . 1 `uc 1 T1GSS0 1 0 :1:0 
+`uc 1 T1GSS1 1 0 :1:1 
+`uc 1 T1GVAL 1 0 :1:2 
+`uc 1 T1GGO_nDONE 1 0 :1:3 
+`uc 1 T1GSPM 1 0 :1:4 
+`uc 1 T1GTM 1 0 :1:5 
+`uc 1 T1GPOL 1 0 :1:6 
+`uc 1 TMR1GE 1 0 :1:7 
+]
+"962
+[s S682 . 1 `uc 1 T1GSS 1 0 :2:0 
+`uc 1 . 1 0 :1:2 
+`uc 1 T1GGO 1 0 :1:3 
+]
+[u S686 . 1 `S673 1 . 1 0 `S682 1 . 1 0 ]
+[v _T1GCONbits T1GCONbits `VES686  1 e 1 @25 ]
+"1222
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1284
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1346
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+"1408
+[v _TRISE TRISE `VEuc  1 e 1 @144 ]
+[s S367 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 TMR1GIE 1 0 :1:7 
+]
+"1446
+[u S376 . 1 `S367 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES376  1 e 1 @145 ]
+"1594
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @149 ]
+[s S543 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"1617
+[s S552 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+]
+[u S557 . 1 `S543 1 . 1 0 `S552 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES557  1 e 1 @149 ]
+"1728
+[v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
+"1787
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @152 ]
+"1845
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"2187
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+"2249
+[v _LATB LATB `VEuc  1 e 1 @269 ]
+"2311
+[v _LATC LATC `VEuc  1 e 1 @270 ]
+[s S1066 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"2328
+[u S1075 . 1 `S1066 1 . 1 0 ]
+[v _LATCbits LATCbits `VES1075  1 e 1 @270 ]
+"2373
+[v _LATE LATE `VEuc  1 e 1 @272 ]
+"2666
+[v _BORCON BORCON `VEuc  1 e 1 @278 ]
+"3015
+[v _APFCON APFCON `VEuc  1 e 1 @285 ]
+"3071
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"3129
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"3187
+[v _EEADR EEADR `VEus  1 e 2 @401 ]
+"3246
+[v _EEDATA EEDATA `VEuc  1 e 1 @403 ]
+"3299
+[v _EECON1 EECON1 `VEuc  1 e 1 @405 ]
+[s S1261 . 1 `uc 1 RD 1 0 :1:0 
+`uc 1 WR 1 0 :1:1 
+`uc 1 WREN 1 0 :1:2 
+`uc 1 WRERR 1 0 :1:3 
+`uc 1 FREE 1 0 :1:4 
+`uc 1 LWLO 1 0 :1:5 
+`uc 1 CFGS 1 0 :1:6 
+`uc 1 EEPGD 1 0 :1:7 
+]
+"3316
+[u S1270 . 1 `S1261 1 . 1 0 ]
+[v _EECON1bits EECON1bits `VES1270  1 e 1 @405 ]
+"3361
+[v _EECON2 EECON2 `VEuc  1 e 1 @406 ]
+"3696
+[v _WPUB WPUB `VEuc  1 e 1 @525 ]
+"3766
+[v _WPUE WPUE `VEuc  1 e 1 @528 ]
+"3787
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @529 ]
+"3807
+[v _SSPADD SSPADD `VEuc  1 e 1 @530 ]
+"3847
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @532 ]
+"3909
+[v _SSPCON1 SSPCON1 `VEuc  1 e 1 @533 ]
+[s S191 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"3931
+[u S200 . 1 `S191 1 . 1 0 ]
+[v _SSPCON1bits SSPCON1bits `VES200  1 e 1 @533 ]
+"4031
+[v _SSPCON2 SSPCON2 `VEuc  1 e 1 @534 ]
+[s S346 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"4048
+[u S355 . 1 `S346 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES355  1 e 1 @534 ]
+"8074
+[v _PLLR PLLR `VEb  1 e 0 @1238 ]
+"153 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\doprnt.c
+[v _prec prec `i  1 s 2 prec ]
+[v _width width `i  1 s 2 width ]
+"154
+[v _flags flags `uc  1 s 1 flags ]
+"185
+[v _dbuf dbuf `[32]uc  1 s 32 dbuf ]
+[s S1000 . 11 `E2730 1 state 1 0 `us 1 press_time_ms 2 1 `us 1 press_long_time_ms 2 3 `us 1 release_time_ms 2 5 `uc 1 fLong 1 7 `uc 1 fLong_100ms 1 8 `uc 1 fShort 1 9 `uc 1 fKeyIn 1 10 ]
+"11 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\Key.c
+[v _key key `[4]S1000  1 e 44 0 ]
+"13 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\LCD.c
+[v _Cur_X Cur_X `uc  1 e 1 0 ]
+"14
+[v _Cur_Y Cur_Y `uc  1 e 1 0 ]
+"147 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\mcc_generated_files/i2c_master.c
+[v _i2c_fsmStateTable i2c_fsmStateTable `DC[16]*.37(E3110  1 e 32 0 ]
+[s S165 . 29 `[6]*.37(E363 1 callbackTable 12 0 `[6]*.4v 1 callbackPayload 6 12 `us 1 time_out 2 18 `us 1 time_out_value 2 20 `uc 1 address 1 22 `*.4uc 1 data_ptr 1 23 `ui 1 data_length 2 24 `E3110 1 state 1 26 `E358 1 error 1 27 `uc 1 addressNackCheck 1 28 :1:0 
+`uc 1 busy 1 28 :1:1 
+`uc 1 inUse 1 28 :1:2 
+`uc 1 bufferFree 1 28 :1:3 
+]
+"166
+[v _I2C_Status I2C_Status `S165  1 e 29 0 ]
+"58 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\mcc_generated_files/tmr0.c
+[v _timer0ReloadVal timer0ReloadVal `VEuc  1 e 1 0 ]
+"59
+[v _TMR0_InterruptHandler TMR0_InterruptHandler `*.37(v  1 e 2 0 ]
+"57 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\mcc_generated_files/tmr1.c
+[v _timer1ReloadVal timer1ReloadVal `VEus  1 e 2 0 ]
+"58
+[v _TMR1_InterruptHandler TMR1_InterruptHandler `*.37(v  1 e 2 0 ]
+"8 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\RelayControl.c
+[v _buf buf `[17]uc  1 e 17 0 ]
+"9
+[v _SetTimer1_ON_cnt SetTimer1_ON_cnt `us  1 e 2 0 ]
+"10
+[v _SetTimer1_OFF_cnt SetTimer1_OFF_cnt `us  1 e 2 0 ]
+"12
+[v _tempTime_cnt tempTime_cnt `us  1 e 2 0 ]
+"13
+[v _set_time set_time `uc  1 e 1 0 ]
+"15
+[v _OutState OutState `a  1 e 1 0 ]
+"18
+[v _SET1_TimerState SET1_TimerState `a  1 e 1 0 ]
+"19
+[v _SET1_RelayState SET1_RelayState `a  1 e 1 0 ]
+"21
+[v _LCD_DispMode LCD_DispMode `uc  1 e 1 0 ]
+"8 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\TimerEven.c
+[v _fT0_10ms fT0_10ms `a  1 e 1 0 ]
+"9
+[v _fT1_1S fT1_1S `a  1 e 1 0 ]
+"11
+[v _T1_1000ms_cnt T1_1000ms_cnt `uc  1 e 1 0 ]
+"12
+[v _SET1_Timer SET1_Timer `us  1 e 2 0 ]
+"13
+[v _SET2_Timer SET2_Timer `us  1 e 2 0 ]
+"14
+[v _T_1S_cnt T_1S_cnt `us  1 e 2 0 ]
+"100 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"145
+} 0
+"175 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\RelayControl.c
+[v _TimerCount TimerCount `(v  1 e 1 0 ]
+{
+"197
+} 0
+"265
+[v _TimeSetting2 TimeSetting2 `(v  1 e 1 0 ]
+{
+"327
+} 0
+"199
+[v _TimeSetting1 TimeSetting1 `(v  1 e 1 0 ]
+{
+"263
+} 0
+"339
+[v _SetTimerN_Value SetTimerN_Value `(v  1 e 1 0 ]
+{
+[v SetTimerN_Value@x x `uc  1 a 1 wreg ]
+[v SetTimerN_Value@x x `uc  1 a 1 wreg ]
+[v SetTimerN_Value@x x `uc  1 a 1 2 ]
+"345
+} 0
+"20 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\eeprom.c
+[v _EEPROM_WriteWord EEPROM_WriteWord `(v  1 e 1 0 ]
+{
+[v EEPROM_WriteWord@address address `uc  1 a 1 wreg ]
+[v EEPROM_WriteWord@address address `uc  1 a 1 wreg ]
+[v EEPROM_WriteWord@value value `us  1 p 2 6 ]
+"22
+[v EEPROM_WriteWord@address address `uc  1 a 1 9 ]
+"26
+} 0
+"6 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\pic\__eewrite.c
+[v _eeprom_write eeprom_write `(v  1 e 1 0 ]
+{
+[v eeprom_write@addr addr `uc  1 a 1 wreg ]
+[v eeprom_write@addr addr `uc  1 a 1 wreg ]
+[v eeprom_write@value value `uc  1 p 1 2 ]
+[v eeprom_write@addr addr `uc  1 a 1 5 ]
+"9
+} 0
+"171 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\mcc_generated_files/tmr1.c
+[v _TMR1_SetInterruptHandler TMR1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v TMR1_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 2 ]
+"173
+} 0
+"140 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\mcc_generated_files/tmr0.c
+[v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v TMR0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 2 ]
+"142
+} 0
+"48 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"56
+} 0
+"70
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+{
+"73
+} 0
+"64 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\mcc_generated_files/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+{
+"91
+} 0
+"64 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+{
+"85
+} 0
+"55 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"97
+} 0
+"58 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"68
+} 0
+"168 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\mcc_generated_files/i2c_master.c
+[v _I2C_Initialize I2C_Initialize `(v  1 e 1 0 ]
+{
+"174
+} 0
+"24 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\RelayControl.c
+[v _RelayControl_Init RelayControl_Init `(v  1 e 1 0 ]
+{
+"29
+} 0
+"40 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\LCD.c
+[v _PWR_ON_DISP PWR_ON_DISP `(v  1 e 1 0 ]
+{
+"61
+} 0
+"13 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\eeprom.c
+[v _POWER_ON_EEPROM_READ POWER_ON_EEPROM_READ `(v  1 e 1 0 ]
+{
+"16
+} 0
+"30
+[v _EEPROM_ReadWord EEPROM_ReadWord `(us  1 e 2 0 ]
+{
+[v EEPROM_ReadWord@address address `uc  1 a 1 wreg ]
+"32
+[v EEPROM_ReadWord@high high `uc  1 a 1 6 ]
+"31
+[v EEPROM_ReadWord@low low `uc  1 a 1 5 ]
+"30
+[v EEPROM_ReadWord@address address `uc  1 a 1 wreg ]
+[v EEPROM_ReadWord@address address `uc  1 a 1 7 ]
+"35
+} 0
+"6 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\pic\__eeread.c
+[v _eeprom_read eeprom_read `(uc  1 e 1 0 ]
+{
+[v eeprom_read@addr addr `uc  1 a 1 wreg ]
+[v eeprom_read@addr addr `uc  1 a 1 wreg ]
+"9
+[v eeprom_read@addr addr `uc  1 a 1 5 ]
+"19
+} 0
+"127 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\RelayControl.c
+[v _Normal Normal `(v  1 e 1 0 ]
+{
+"173
+} 0
+"31
+[v _TimeRestart TimeRestart `(v  1 e 1 0 ]
+{
+"36
+} 0
+"329
+[v _GetTimerN_Value GetTimerN_Value `(us  1 e 2 0 ]
+{
+[v GetTimerN_Value@x x `uc  1 a 1 wreg ]
+"330
+[v GetTimerN_Value@tmpCnt tmpCnt `us  1 a 2 4 ]
+"329
+[v GetTimerN_Value@x x `uc  1 a 1 wreg ]
+[v GetTimerN_Value@x x `uc  1 a 1 6 ]
+"337
+} 0
+"18 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\LCD.c
+[v _LCD_Init LCD_Init `(v  1 e 1 0 ]
+{
+"38
+} 0
+"17 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\Key.c
+[v _KEY_Init KEY_Init `(v  1 e 1 0 ]
+{
+"18
+[v KEY_Init@i i `uc  1 a 1 7 ]
+"27
+} 0
+"63 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\LCD.c
+[v _DISP_SHOW DISP_SHOW `(v  1 e 1 0 ]
+{
+"115
+} 0
+"179 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\hd44780_i2c.c
+[v _LCD_SetCursor LCD_SetCursor `(v  1 e 1 0 ]
+{
+[v LCD_SetCursor@col col `uc  1 a 1 wreg ]
+"180
+[v LCD_SetCursor@row_offsets row_offsets `[4]uc  1 a 4 16 ]
+"179
+[v LCD_SetCursor@col col `uc  1 a 1 wreg ]
+[v LCD_SetCursor@row row `uc  1 p 1 15 ]
+[v LCD_SetCursor@F3194 F3194 `[4]uc  1 s 4 F3194 ]
+[v LCD_SetCursor@col col `uc  1 a 1 20 ]
+"182
+} 0
+"163
+[v _LCD_Command LCD_Command `(v  1 e 1 0 ]
+{
+[v LCD_Command@cmd cmd `uc  1 a 1 wreg ]
+[v LCD_Command@cmd cmd `uc  1 a 1 wreg ]
+"165
+[v LCD_Command@cmd cmd `uc  1 a 1 14 ]
+"168
+} 0
+"184
+[v _LCD_Print LCD_Print `(v  1 e 1 0 ]
+{
+[v LCD_Print@str str `*.5DCuc  1 a 1 wreg ]
+[v LCD_Print@str str `*.5DCuc  1 a 1 wreg ]
+[v LCD_Print@str str `*.5DCuc  1 a 1 16 ]
+"188
+} 0
+"170
+[v _LCD_Data LCD_Data `(v  1 e 1 0 ]
+{
+[v LCD_Data@data data `uc  1 a 1 wreg ]
+[v LCD_Data@data data `uc  1 a 1 wreg ]
+"172
+[v LCD_Data@data data `uc  1 a 1 14 ]
+"175
+} 0
+"148
+[v _PCF8574_LCD_SendNibble PCF8574_LCD_SendNibble `(v  1 e 1 0 ]
+{
+[v PCF8574_LCD_SendNibble@nibble nibble `uc  1 a 1 wreg ]
+"149
+[v PCF8574_LCD_SendNibble@data data `uc  1 a 1 12 ]
+"148
+[v PCF8574_LCD_SendNibble@nibble nibble `uc  1 a 1 wreg ]
+[v PCF8574_LCD_SendNibble@rs rs `uc  1 p 1 9 ]
+[v PCF8574_LCD_SendNibble@nibble nibble `uc  1 a 1 11 ]
+"156
+} 0
+"91 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\mcc_generated_files/examples/i2c_master_example.c
+[v _I2C_Write1ByteRegister I2C_Write1ByteRegister `(v  1 e 1 0 ]
+{
+[v I2C_Write1ByteRegister@address address `uc  1 a 1 wreg ]
+[v I2C_Write1ByteRegister@address address `uc  1 a 1 wreg ]
+[v I2C_Write1ByteRegister@reg reg `uc  1 p 1 6 ]
+[v I2C_Write1ByteRegister@data data `uc  1 p 1 7 ]
+[v I2C_Write1ByteRegister@address address `uc  1 a 1 8 ]
+"101
+} 0
+"176 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\mcc_generated_files/i2c_master.c
+[v _I2C_Open I2C_Open `(E358  1 e 1 0 ]
+{
+[v I2C_Open@address address `uc  1 a 1 wreg ]
+"177
+[v I2C_Open@returnValue returnValue `E358  1 a 1 3 ]
+"176
+[v I2C_Open@address address `uc  1 a 1 wreg ]
+[v I2C_Open@address address `uc  1 a 1 2 ]
+"216
+} 0
+"231
+[v _I2C_MasterOperation I2C_MasterOperation `(E358  1 e 1 0 ]
+{
+[v I2C_MasterOperation@read read `a  1 a 1 wreg ]
+"232
+[v I2C_MasterOperation@returnValue returnValue `E358  1 a 1 5 ]
+"231
+[v I2C_MasterOperation@read read `a  1 a 1 wreg ]
+[v I2C_MasterOperation@read read `a  1 a 1 4 ]
+"246
+} 0
+"304
+[v _I2C_Poller I2C_Poller `(v  1 s 1 I2C_Poller ]
+{
+"309
+} 0
+"572
+[v _I2C_MasterWaitForEvent I2C_MasterWaitForEvent `T(v  1 s 1 I2C_MasterWaitForEvent ]
+{
+"578
+} 0
+"311
+[v _I2C_MasterFsm I2C_MasterFsm `T(v  1 s 1 I2C_MasterFsm ]
+{
+"318
+} 0
+"464
+[v _I2C_DO_ADDRESS_NACK I2C_DO_ADDRESS_NACK `(E3110  1 s 1 I2C_DO_ADDRESS_NACK ]
+{
+"475
+} 0
+"459
+[v _I2C_DO_RESET I2C_DO_RESET `(E3110  1 s 1 I2C_DO_RESET ]
+{
+"463
+} 0
+"454
+[v _I2C_DO_RX_NACK_RESTART I2C_DO_RX_NACK_RESTART `(E3110  1 s 1 I2C_DO_RX_NACK_RESTART ]
+{
+"457
+} 0
+"449
+[v _I2C_DO_RX_NACK_STOP I2C_DO_RX_NACK_STOP `(E3110  1 s 1 I2C_DO_RX_NACK_STOP ]
+{
+"452
+} 0
+"444
+[v _I2C_DO_RX_ACK I2C_DO_RX_ACK `(E3110  1 s 1 I2C_DO_RX_ACK ]
+{
+"447
+} 0
+"439
+[v _I2C_DO_SEND_STOP I2C_DO_SEND_STOP `(E3110  1 s 1 I2C_DO_SEND_STOP ]
+{
+"442
+} 0
+"434
+[v _I2C_DO_SEND_RESTART I2C_DO_SEND_RESTART `(E3110  1 s 1 I2C_DO_SEND_RESTART ]
+{
+"437
+} 0
+"429
+[v _I2C_DO_SEND_RESTART_WRITE I2C_DO_SEND_RESTART_WRITE `(E3110  1 s 1 I2C_DO_SEND_RESTART_WRITE ]
+{
+"432
+} 0
+"424
+[v _I2C_DO_SEND_RESTART_READ I2C_DO_SEND_RESTART_READ `(E3110  1 s 1 I2C_DO_SEND_RESTART_READ ]
+{
+"427
+} 0
+"378
+[v _I2C_DO_RCEN I2C_DO_RCEN `(E3110  1 s 1 I2C_DO_RCEN ]
+{
+"382
+} 0
+"358
+[v _I2C_DO_RX I2C_DO_RX `(E3110  1 s 1 I2C_DO_RX ]
+{
+"376
+} 0
+"338
+[v _I2C_DO_TX I2C_DO_TX `(E3110  1 s 1 I2C_DO_TX ]
+{
+"356
+} 0
+"332
+[v _I2C_DO_SEND_ADR_WRITE I2C_DO_SEND_ADR_WRITE `(E3110  1 s 1 I2C_DO_SEND_ADR_WRITE ]
+{
+"336
+} 0
+"326
+[v _I2C_DO_SEND_ADR_READ I2C_DO_SEND_ADR_READ `(E3110  1 s 1 I2C_DO_SEND_ADR_READ ]
+{
+"330
+} 0
+"320
+[v _I2C_DO_IDLE I2C_DO_IDLE `(E3110  1 s 1 I2C_DO_IDLE ]
+{
+"324
+} 0
+"384
+[v _I2C_DO_TX_EMPTY I2C_DO_TX_EMPTY `(E3110  1 s 1 I2C_DO_TX_EMPTY ]
+{
+"398
+} 0
+"570
+[v _I2C_MasterSetIrq I2C_MasterSetIrq `T(v  1 s 1 I2C_MasterSetIrq ]
+{
+} 0
+"534
+[v _I2C_MasterIsNack I2C_MasterIsNack `T(a  1 s 1 I2C_MasterIsNack ]
+{
+} 0
+"519
+[v _I2C_MasterSendTxData I2C_MasterSendTxData `T(v  1 s 1 I2C_MasterSendTxData ]
+{
+[v I2C_MasterSendTxData@data data `uc  1 a 1 wreg ]
+[v I2C_MasterSendTxData@data data `uc  1 a 1 wreg ]
+[v I2C_MasterSendTxData@data data `uc  1 a 1 2 ]
+} 0
+"536
+[v _I2C_MasterSendAck I2C_MasterSendAck `T(v  1 s 1 I2C_MasterSendAck ]
+{
+"539
+} 0
+"517
+[v _I2C_MasterGetRxData I2C_MasterGetRxData `T(uc  1 s 1 I2C_MasterGetRxData ]
+{
+} 0
+"541
+[v _I2C_MasterSendNack I2C_MasterSendNack `T(v  1 s 1 I2C_MasterSendNack ]
+{
+"544
+} 0
+"528
+[v _I2C_MasterStartRx I2C_MasterStartRx `T(v  1 s 1 I2C_MasterStartRx ]
+{
+} 0
+"485
+[v _I2C_CallbackReturnReset I2C_CallbackReturnReset `(E363  1 e 1 0 ]
+{
+[v I2C_CallbackReturnReset@funPtr funPtr `*.4v  1 p 1 9 ]
+"487
+} 0
+"483
+[v _I2C_CallbackReturnStop I2C_CallbackReturnStop `(E363  1 e 1 0 ]
+{
+} 0
+"158 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\mcc_generated_files/examples/i2c_master_example.c
+[v _wr1RegCompleteHandler wr1RegCompleteHandler `(E363  1 s 1 wr1RegCompleteHandler ]
+{
+[v wr1RegCompleteHandler@ptr ptr `*.4v  1 p 1 9 ]
+"163
+} 0
+"270 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\mcc_generated_files/i2c_master.c
+[v _I2C_SetDataCompleteCallback I2C_SetDataCompleteCallback `(v  1 e 1 0 ]
+{
+[v I2C_SetDataCompleteCallback@cb cb `*.37(E363  1 p 2 6 ]
+[v I2C_SetDataCompleteCallback@ptr ptr `*.4v  1 p 1 8 ]
+"272
+} 0
+"293
+[v _I2C_SetCallback I2C_SetCallback `(v  1 s 1 I2C_SetCallback ]
+{
+[v I2C_SetCallback@idx idx `E3128  1 a 1 wreg ]
+[v I2C_SetCallback@idx idx `E3128  1 a 1 wreg ]
+[v I2C_SetCallback@cb cb `*.37(E363  1 p 2 2 ]
+"294
+[v I2C_SetCallback@ptr ptr `*.4v  1 p 1 4 ]
+[v I2C_SetCallback@idx idx `E3128  1 a 1 5 ]
+"302
+} 0
+"262
+[v _I2C_SetBuffer I2C_SetBuffer `(v  1 e 1 0 ]
+{
+[v I2C_SetBuffer@buffer buffer `*.4v  1 a 1 wreg ]
+[v I2C_SetBuffer@buffer buffer `*.4v  1 a 1 wreg ]
+[v I2C_SetBuffer@bufferSize bufferSize `ui  1 p 2 2 ]
+[v I2C_SetBuffer@buffer buffer `*.4v  1 a 1 4 ]
+"268
+} 0
+"532
+[v _I2C_MasterStop I2C_MasterStop `T(v  1 s 1 I2C_MasterStop ]
+{
+} 0
+"521
+[v _I2C_MasterEnableRestart I2C_MasterEnableRestart `T(v  1 s 1 I2C_MasterEnableRestart ]
+{
+} 0
+"530
+[v _I2C_MasterStart I2C_MasterStart `T(v  1 s 1 I2C_MasterStart ]
+{
+} 0
+"218
+[v _I2C_Close I2C_Close `(E358  1 e 1 0 ]
+{
+"219
+[v I2C_Close@returnValue returnValue `E358  1 a 1 2 ]
+"229
+} 0
+"566
+[v _I2C_MasterDisableIrq I2C_MasterDisableIrq `T(v  1 s 1 I2C_MasterDisableIrq ]
+{
+} 0
+"512
+[v _I2C_MasterClose I2C_MasterClose `T(v  1 s 1 I2C_MasterClose ]
+{
+"515
+} 0
+"568
+[v _I2C_MasterClearIrq I2C_MasterClearIrq `T(v  1 s 1 I2C_MasterClearIrq ]
+{
+} 0
+"66 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\RelayControl.c
+[v _DispNormal DispNormal `(v  1 e 1 0 ]
+{
+[v DispNormal@n n `uc  1 a 1 wreg ]
+"67
+[v DispNormal@temp_str temp_str `[4]uc  1 a 4 0 ]
+"68
+[v DispNormal@temp_state temp_state `[3]uc  1 a 3 5 ]
+"66
+[v DispNormal@n n `uc  1 a 1 wreg ]
+[v DispNormal@Num Num `us  1 p 2 71 ]
+[v DispNormal@Num2 Num2 `us  1 p 2 73 ]
+[v DispNormal@buf buf `*.5uc  1 p 1 75 ]
+[v DispNormal@n n `uc  1 a 1 4 ]
+"85
+} 0
+"3 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strncpy.c
+[v _strncpy strncpy `(*.5uc  1 e 2 0 ]
+{
+[v strncpy@d d `*.5uc  1 a 1 wreg ]
+"5
+[v strncpy@cp cp `*.5uc  1 a 1 9 ]
+"3
+[v strncpy@d d `*.5uc  1 a 1 wreg ]
+[v strncpy@s s `*.25DCuc  1 p 2 2 ]
+[v strncpy@n n `ui  1 p 2 4 ]
+"6
+[v strncpy@d d `*.5uc  1 a 1 8 ]
+"15
+} 0
+"9 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\nf_sprintf.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+{
+[v sprintf@s s `*.5uc  1 a 1 wreg ]
+[u S1773 . 2 `*.39uc 1 buffer 2 0 `*.39DCuc 1 source 2 0 ]
+"13
+[s S1776 _IO_FILE 11 `S1773 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v sprintf@f f `S1776  1 a 11 60 ]
+"12
+[v sprintf@ap ap `[1]*.4v  1 a 1 58 ]
+"9
+[v sprintf@s s `*.5uc  1 a 1 wreg ]
+[v sprintf@fmt fmt `*.25DCuc  1 p 2 47 ]
+"15
+[v sprintf@s s `*.5uc  1 a 1 59 ]
+"23
+} 0
+"1817 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\doprnt.c
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+{
+[s S1808 _IO_FILE 0 ]
+[v vfprintf@fp fp `*.4S1808  1 a 1 wreg ]
+"1820
+[v vfprintf@cfmt cfmt `*.25uc  1 a 2 45 ]
+"1817
+[v vfprintf@fp fp `*.4S1808  1 a 1 wreg ]
+[v vfprintf@fmt fmt `*.25DCuc  1 p 2 40 ]
+[v vfprintf@ap ap `*.4*.4v  1 p 1 42 ]
+"1822
+"1817
+[v vfprintf@fp fp `*.4S1808  1 a 1 44 ]
+"1840
+} 0
+"1177
+[v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
+{
+[s S1808 _IO_FILE 0 ]
+[v vfpfcnvrt@fp fp `*.4S1808  1 a 1 wreg ]
+[u S1832 . 4 `i 1 sint 2 0 `ui 1 uint 2 0 `d 1 f 4 0 ]
+"1188
+[v vfpfcnvrt@convarg convarg `S1832  1 a 4 32 ]
+"1179
+[v vfpfcnvrt@cp cp `*.25uc  1 a 2 36 ]
+"1180
+[v vfpfcnvrt@done done `a  1 a 1 39 ]
+"1177
+[v vfpfcnvrt@fp fp `*.4S1808  1 a 1 wreg ]
+[v vfpfcnvrt@fmt fmt `*.4*.25uc  1 p 1 26 ]
+[v vfpfcnvrt@ap ap `*.4*.4v  1 p 1 27 ]
+"1201
+"1177
+[v vfpfcnvrt@fp fp `*.4S1808  1 a 1 38 ]
+"1814
+} 0
+"942
+[v _stoa stoa `(v  1 s 1 stoa ]
+{
+[s S1808 _IO_FILE 0 ]
+[v stoa@fp fp `*.4S1808  1 a 1 wreg ]
+"945
+[v stoa@l l `i  1 a 2 11 ]
+"944
+[v stoa@cp cp `*.26uc  1 a 2 9 ]
+"947
+[v stoa@w w `i  1 a 2 6 ]
+"945
+[v stoa@p p `i  1 a 2 4 ]
+"942
+[v stoa@fp fp `*.4S1808  1 a 1 wreg ]
+[v stoa@s s `*.39uc  1 p 2 0 ]
+"951
+"942
+[v stoa@fp fp `*.4S1808  1 a 1 8 ]
+"997
+} 0
+"1158
+[v _read_prec_or_width read_prec_or_width `(i  1 s 2 read_prec_or_width ]
+{
+[v read_prec_or_width@fmt fmt `*.4*.25DCuc  1 a 1 wreg ]
+"1164
+[v read_prec_or_width@c c `uc  1 a 1 3 ]
+"1159
+[v read_prec_or_width@n n `i  1 a 2 4 ]
+"1158
+[v read_prec_or_width@fmt fmt `*.4*.25DCuc  1 a 1 wreg ]
+[v read_prec_or_width@ap ap `*.4[1]*.4v  1 p 1 8 ]
+[v read_prec_or_width@fmt fmt `*.4*.25DCuc  1 a 1 6 ]
+"1171
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 6 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 2 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 4 ]
+"53
+} 0
+"513 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\doprnt.c
+[v _dtoa dtoa `(v  1 s 1 dtoa ]
+{
+[s S1808 _IO_FILE 0 ]
+[v dtoa@fp fp `*.4S1808  1 a 1 wreg ]
+"516
+[v dtoa@i i `i  1 a 2 24 ]
+[v dtoa@w w `i  1 a 2 21 ]
+"515
+[v dtoa@s s `uc  1 a 1 23 ]
+"520
+[v dtoa@p p `a  1 a 1 20 ]
+"513
+[v dtoa@fp fp `*.4S1808  1 a 1 wreg ]
+[v dtoa@d d `i  1 p 2 14 ]
+"520
+"513
+[v dtoa@fp fp `*.4S1808  1 a 1 17 ]
+"583
+} 0
+"193
+[v _pad pad `(v  1 s 1 pad ]
+{
+[s S1808 _IO_FILE 0 ]
+[v pad@fp fp `*.4S1808  1 a 1 wreg ]
+"195
+[v pad@i i `i  1 a 2 11 ]
+"193
+[v pad@fp fp `*.4S1808  1 a 1 wreg ]
+[v pad@buf buf `*.5uc  1 p 1 7 ]
+[v pad@p p `i  1 p 2 8 ]
+"199
+"193
+[v pad@fp fp `*.4S1808  1 a 1 13 ]
+"226
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+{
+[v fputs@s s `*.5DCuc  1 a 1 wreg ]
+"11
+[v fputs@i i `i  1 a 2 4 ]
+"10
+[v fputs@c c `uc  1 a 1 3 ]
+"8
+[v fputs@s s `*.5DCuc  1 a 1 wreg ]
+[u S1773 . 2 `*.39uc 1 buffer 2 0 `*.39DCuc 1 source 2 0 ]
+[s S1776 _IO_FILE 11 `S1773 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputs@fp fp `*.4S1776  1 p 1 0 ]
+"13
+[v fputs@s s `*.5DCuc  1 a 1 6 ]
+"19
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+{
+[v fputc@c c `i  1 p 2 2 ]
+[u S1773 . 2 `*.39uc 1 buffer 2 0 `*.39DCuc 1 source 2 0 ]
+[s S1776 _IO_FILE 11 `S1773 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputc@fp fp `*.4S1776  1 p 1 4 ]
+"24
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\putch.c
+[v _putch putch `(v  1 e 1 0 ]
+{
+"9
+} 0
+"1 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
+{
+[v abs@a a `i  1 p 2 0 ]
+"4
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 8 ]
+[v ___awmod@counter counter `uc  1 a 1 7 ]
+"5
+[v ___awmod@divisor divisor `i  1 p 2 2 ]
+[v ___awmod@dividend dividend `i  1 p 2 4 ]
+"34
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 2 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 1 ]
+[v ___awdiv@counter counter `uc  1 a 1 0 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 2 ]
+[v ___awdiv@dividend dividend `i  1 p 2 4 ]
+"41
+} 0
+"109 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\Key.c
+[v _CheckKey CheckKey `(v  1 e 1 0 ]
+{
+"119
+} 0
+"30
+[v _KEY_ScanAll KEY_ScanAll `(v  1 e 1 0 ]
+{
+[s S1000 . 11 `E2730 1 state 1 0 `us 1 press_time_ms 2 1 `us 1 press_long_time_ms 2 3 `us 1 release_time_ms 2 5 `uc 1 fLong 1 7 `uc 1 fLong_100ms 1 8 `uc 1 fShort 1 9 `uc 1 fKeyIn 1 10 ]
+"32
+[v KEY_ScanAll@k k `*.5S1000  1 a 1 9 ]
+"31
+[v KEY_ScanAll@ii ii `uc  1 a 1 8 ]
+"106
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+{
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v ___bmul@product product `uc  1 a 1 4 ]
+"4
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 2 ]
+"6
+[v ___bmul@multiplier multiplier `uc  1 a 1 5 ]
+"51
+} 0
+"52 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+{
+"74
+} 0
+"157 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\mcc_generated_files/tmr1.c
+[v _TMR1_ISR TMR1_ISR `(v  1 e 1 0 ]
+{
+"168
+} 0
+"120
+[v _TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
+{
+[v TMR1_WriteTimer@timerVal timerVal `us  1 p 2 0 ]
+"140
+} 0
+"21 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\TimerEven.c
+[v _TMR1_10msEven TMR1_10msEven `(v  1 e 1 0 ]
+{
+"36
+} 0
+"87 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\RelayControl.c
+[v _KeepTimerCounter KeepTimerCounter `(v  1 e 1 0 ]
+{
+"125
+} 0
+"108 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\mcc_generated_files/tmr0.c
+[v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
+{
+"110
+[v TMR0_ISR@CountCallBack CountCallBack `VEus  1 s 2 CountCallBack ]
+"128
+} 0
+"130
+[v _TMR0_CallBack TMR0_CallBack `(v  1 e 1 0 ]
+{
+"138
+} 0
+"18 D:\yiming\00work\LCD_I2C\LCD_I2C_V07.X\TimerEven.c
+[v _TMR0_10msEven TMR0_10msEven `(v  1 e 1 0 ]
+{
+} 0
